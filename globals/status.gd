@@ -3,9 +3,9 @@ extends Node
 signal stat_change
 
 #variables of  player stats
-var lives_amount: int = 5:
+var lives: int = 5:
 	set(value):
-		lives_amount = value
+		lives = value
 		stat_change.emit()
 
 
@@ -13,3 +13,6 @@ var stamina: int = 100:
 	set(value):
 		stamina = value
 		stat_change.emit()
+
+#current area for spawn list
+var current_area = [1,2,3]
