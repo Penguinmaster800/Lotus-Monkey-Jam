@@ -1,7 +1,5 @@
 extends LevelParent
 
-signal chosen_area(selected_arrangement)
-
 #list of area 1 obstacle arrangements
 var arrangement_1: PackedScene = preload("res://scenes/levels/area 1/arrangement_1.tscn")
 var arrangement_2: PackedScene = preload("res://scenes/levels/area 1/arrangement_2.tscn")
@@ -16,6 +14,4 @@ var selected_arrangement = layout_options[randi()%len(layout_options)]
 
 
 func _onready():
-	print("area1 ready")
-	_on_chosen_area(selected_arrangement)
-	
+	print(selected_arrangement)

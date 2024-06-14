@@ -5,5 +5,3 @@
 
 [node name="Area1" instance=ExtResource("1_7upd0")]
 script = ExtResource("2_5pyj7")
-
-[connection signal="chosen_area" from="." to="." method="_on_chosen_area"]
