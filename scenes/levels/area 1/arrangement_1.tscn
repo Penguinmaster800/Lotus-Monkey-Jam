@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckwkmhq1hljm6"]
+[gd_scene load_steps=2 format=3 uid="uid://bh73wh5xgsfne"]
 
-[ext_resource type="PackedScene" uid="uid://cmolia7juxj0s" path="res://scenes/levels/level.tscn" id="1_j3vbf"]
+[ext_resource type="Texture2D" uid="uid://cshlho6a5v4ch" path="res://graphics/sprites/monkey_base_one_lookback.png" id="1_7lq0e"]
 
-[node name="Level" instance=ExtResource("1_j3vbf")]
+[node name="Arrangement1" type="Node2D"]
+
+[node name="MonkeyBaseOneLookback" type="Sprite2D" parent="."]
+position = Vector2(53, 39)
+texture = ExtResource("1_7lq0e")
