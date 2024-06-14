@@ -1,3 +1,48 @@
-[gd_scene format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=7 format=3 uid="uid://kgbtcvcvph7k"]
 
-[node name="Player" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://b20kouk4ipay0" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
+atlas = ExtResource("1_s705a")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx5ja"]
+atlas = ExtResource("1_s705a")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mao3a"]
+atlas = ExtResource("1_s705a")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uk76s"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_1ug8h")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_yx5ja")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_mao3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc2g"]
+size = Vector2(19, 20.5)
+
+[node name="Monkee" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="idle animation" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-1, -16)
+sprite_frames = SubResource("SpriteFrames_uk76s")
+frame_progress = 0.0568866
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, -14.75)
+shape = SubResource("RectangleShape2D_8bc2g")
