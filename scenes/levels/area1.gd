@@ -13,5 +13,5 @@ var selected_arrangement = layout_options[randi()%len(layout_options)]
 
 
 
-func _onready():
-	print(selected_arrangement)
+func _ready():
+	_on_chosen_area(selected_arrangement)
