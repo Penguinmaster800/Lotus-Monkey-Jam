@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcw8d4rs40s4d"]
+
+[ext_resource type="PackedScene" uid="uid://df0l8sk53x8qw" path="res://scenes/objects/collision objects/collision_object.tscn" id="1_mbb3d"]
+
+[node name="CollisionObject" instance=ExtResource("1_mbb3d")]
