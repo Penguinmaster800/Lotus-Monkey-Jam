@@ -7,11 +7,31 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("1_nwyg2")
 
-[node name="LoadedGround" type="Node2D" parent="."]
-
 [node name="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" type="Node" parent="."]
 
+[node name="Skybox" type="ColorRect" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1.92523e-06, 0.843157, 0.907198, 1)
+
+[node name="Background" type="ColorRect" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically"]
+z_index = -1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -134.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0.901802, 0.322045, 1)
+
 [node name="Player" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" instance=ExtResource("1_q7gta")]
+
+[node name="LoadedGround" type="Node2D" parent="."]
 
 [node name="Hud" parent="." instance=ExtResource("3_o0sr6")]
 
