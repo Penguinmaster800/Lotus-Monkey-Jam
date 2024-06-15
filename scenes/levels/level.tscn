@@ -6,8 +6,11 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("1_nwyg2")
 
+[node name="LoadedGround" type="Node2D" parent="."]
+
 [node name="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" type="Node" parent="."]
 
 [node name="Player" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" instance=ExtResource("1_q7gta")]
+position = Vector2(-13, 94)
 
 [connection signal="level_ready" from="." to="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically/Player" method="_on_level_level_ready"]
