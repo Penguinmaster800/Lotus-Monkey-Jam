@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=9 format=3 uid="uid://kgbtcvcvph7k"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
 [ext_resource type="Texture2D" uid="uid://v4nxtpki8br2" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
+[ext_resource type="Texture2D" uid="uid://dxm4nhreyyic" path="res://graphics/spritesheet/Bana.png" id="3_1k251"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
 atlas = ExtResource("1_s705a")
@@ -46,3 +47,13 @@ frame_progress = 0.498843
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -14.75)
 shape = SubResource("RectangleShape2D_8bc2g")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -28.0
+offset_top = -22.0
+offset_right = -12.0
+offset_bottom = -6.0
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("3_1k251")
+texture_progress = ExtResource("3_1k251")
