@@ -14,12 +14,10 @@ var selected_arrangement = layout_options[randi()%len(layout_options)]
 
 func _ready():
 	_spawn_area(arrangement_1)
-
+	super._ready()
 
 #_spawn_area(selected_arrangement)
 #	pass
 func _spawn_area(selected_arrangement):
 	var loaded_area = selected_arrangement.instantiate() as Node2D
 	$LoadedGround.add_child(loaded_area)
-
-

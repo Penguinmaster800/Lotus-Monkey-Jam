@@ -19,6 +19,7 @@ var target
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	target = position
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
