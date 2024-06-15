@@ -24,6 +24,7 @@ LoadingTransition="*res://globals/loading_transition.tscn"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
