@@ -1,61 +1,48 @@
-[gd_scene load_steps=10 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=7 format=3 uid="uid://kgbtcvcvph7k"]
 
-[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
-[ext_resource type="Texture2D" uid="uid://dsefxvheggfrj" path="res://graphics/sprites/monkey_base_two.png" id="2_i0yt5"]
-[ext_resource type="Texture2D" uid="uid://bdxhwf40fs4an" path="res://graphics/sprites/monkey_base_one.png" id="3_yg61y"]
-[ext_resource type="Texture2D" uid="uid://o8qo0eeqi1x7" path="res://graphics/sprites/monkey_base_one_happy.png" id="4_d2mlu"]
-[ext_resource type="Texture2D" uid="uid://c4bookwf8rove" path="res://graphics/sprites/monkey_base_two_happy.png" id="5_ywkx6"]
-[ext_resource type="Texture2D" uid="uid://cshlho6a5v4ch" path="res://graphics/sprites/monkey_base_one_lookback.png" id="6_a0caa"]
-[ext_resource type="Texture2D" uid="uid://cwloretllr47b" path="res://graphics/sprites/monkey_base_two_lookback.png" id="7_rrbag"]
+[ext_resource type="Texture2D" uid="uid://b20kouk4ipay0" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_74up6"]
-size = Vector2(18, 28)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
+atlas = ExtResource("1_s705a")
+region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jjdkc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx5ja"]
+atlas = ExtResource("1_s705a")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mao3a"]
+atlas = ExtResource("1_s705a")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uk76s"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_i0yt5")
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_1ug8h")
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_yg61y")
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_yx5ja")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_mao3a")
 }],
 "loop": true,
-"name": &"moving",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_d2mlu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_ywkx6")
-}],
-"loop": true,
-"name": &"moving_happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_a0caa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_rrbag")
-}],
-"loop": true,
-"name": &"moving_lookback",
-"speed": 5.0
+"name": &"default",
+"speed": 3.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_chkfc")
-metadata/_edit_horizontal_guides_ = [-28.0, -25.0]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc2g"]
+size = Vector2(19, 20.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_74up6")
+[node name="Monkee" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_jjdkc")
-animation = &"moving_happy"
-frame_progress = 0.410961
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="idle animation" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-1, -16)
+sprite_frames = SubResource("SpriteFrames_uk76s")
+frame_progress = 0.0568866
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, -14.75)
+shape = SubResource("RectangleShape2D_8bc2g")
