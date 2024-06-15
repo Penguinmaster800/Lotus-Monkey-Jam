@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=8 format=3 uid="uid://kgbtcvcvph7k"]
 
-[ext_resource type="Texture2D" uid="uid://b20kouk4ipay0" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
+[ext_resource type="Texture2D" uid="uid://v4nxtpki8br2" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
 atlas = ExtResource("1_s705a")
@@ -34,15 +35,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc2g"]
 size = Vector2(19, 20.5)
 
-[node name="Monkee" type="Node2D"]
+[node name="Monkee" type="CharacterBody2D"]
+script = ExtResource("1_chkfc")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="idle animation" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="idle animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -16)
 sprite_frames = SubResource("SpriteFrames_uk76s")
-frame_progress = 0.0568866
+frame_progress = 0.498843
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -14.75)
 shape = SubResource("RectangleShape2D_8bc2g")

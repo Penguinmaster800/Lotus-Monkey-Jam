@@ -18,9 +18,6 @@ var target
 func _ready():
 	bottom_lane_y_coord = get_viewport_rect().size.y
 	target = Vector2(32, bottom_lane_y_coord / 2)
-	
-	# Play the first animation
-	$AnimatedSprite2D.play("moving")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -47,4 +44,6 @@ func _input(event):
 #  it would exceed those limits
 func move_to_y_pos(y_pos: int):
 	is_moving = true
-	target = Vector2(position.x, clamp(y_pos, top_lane_y_coord, bottom_lane_y_coord - LANE_HEIGHT))
+	target = Vector2(position.x, clamp(y_pos,
+		top_lane_y_coord + LANE_HEIGHT / 2,
+		bottom_lane_y_coord))
