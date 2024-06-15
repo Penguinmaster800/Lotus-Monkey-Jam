@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci8juhrwv13sj"
-path="res://.godot/imported/monkey_base_spritesheet.png-d6257ef5d1aa8a1c293e2304529883f8.ctex"
+uid="uid://cvf5hk2f86nq8"
+path="res://.godot/imported/assets_16x16_tileset.png-07779df7afdb01587284c13561681bbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/spritesheet/monkey_base_spritesheet.png"
-dest_files=["res://.godot/imported/monkey_base_spritesheet.png-d6257ef5d1aa8a1c293e2304529883f8.ctex"]
+source_file="res://graphics/spritesheet/assets_16x16_tileset.png"
+dest_files=["res://.godot/imported/assets_16x16_tileset.png-07779df7afdb01587284c13561681bbd.ctex"]
 
 [params]
 

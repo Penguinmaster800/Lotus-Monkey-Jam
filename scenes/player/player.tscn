@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=8 format=3 uid="uid://kgbtcvcvph7k"]
 
-<<<<<<< Updated upstream
+
 [node name="Player" type="Node2D"]
-=======
+
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
 [ext_resource type="Texture2D" uid="uid://v4nxtpki8br2" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
 
@@ -44,10 +44,13 @@ script = ExtResource("1_chkfc")
 [node name="idle animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -16)
 sprite_frames = SubResource("SpriteFrames_uk76s")
+
 autoplay = "default"
+
 frame_progress = 0.498843
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -14.75)
 shape = SubResource("RectangleShape2D_8bc2g")
->>>>>>> Stashed changes
+
+

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci8juhrwv13sj"
-path="res://.godot/imported/monkey_base_spritesheet.png-d6257ef5d1aa8a1c293e2304529883f8.ctex"
+uid="uid://dxm4nhreyyic"
+path="res://.godot/imported/Bana.png-3a63837c58c29972e638fdd85766a742.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/spritesheet/monkey_base_spritesheet.png"
-dest_files=["res://.godot/imported/monkey_base_spritesheet.png-d6257ef5d1aa8a1c293e2304529883f8.ctex"]
+source_file="res://graphics/spritesheet/Bana.png"
+dest_files=["res://.godot/imported/Bana.png-3a63837c58c29972e638fdd85766a742.ctex"]
 
 [params]
 
