@@ -16,3 +16,4 @@ var stamina: int = 100:
 
 #current area for spawn list
 var current_area = [1,2,3]
+
