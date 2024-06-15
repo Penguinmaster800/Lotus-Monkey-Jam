@@ -22,4 +22,4 @@ var progress: int = 10:
 		stat_change.emit()
 
 #current area for spawn list
-var current_area = [1,2,3]
+var current_area = 1
