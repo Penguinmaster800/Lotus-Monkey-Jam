@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
 [ext_resource type="Texture2D" uid="uid://2nc1r1ptpgsn" path="res://graphics/placeholders/start button.png" id="2_5allw"]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="MainMenu" type="MarginContainer"]
 anchors_preset = -1
 anchor_left = 0.2
 anchor_top = 0.2

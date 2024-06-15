@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://bi2ks1t8xdvt0"]
+[gd_scene load_steps=2 format=3 uid="uid://btlshrb3i1rmm"]
 
-[node name="Arrangement1" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://ds6sc2c5cneve" path="res://scenes/levels/arrangement_base.tscn" id="1_jkoqm"]
+
+[node name="Arrangement2" instance=ExtResource("1_jkoqm")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://t7p5b7mp6du1"]
+[gd_scene load_steps=5 format=3 uid="uid://t7p5b7mp6du1"]
 
 [ext_resource type="Script" path="res://globals/loading_transition.gd" id="1_0ga71"]
 
@@ -17,8 +17,12 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_el00b"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amqww"]
 _data = {
+"RESET": SubResource("Animation_el00b"),
 "fade_to_black": SubResource("Animation_4r5fq")
 }
 
@@ -26,10 +30,8 @@ _data = {
 script = ExtResource("1_0ga71")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color(0, 0, 0, 1)
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 0)
+modulate = Color(1, 1, 1, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
