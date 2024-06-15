@@ -7,6 +7,14 @@ class_name LevelParent
 @export var level_length: int = 10000
 # The target coordinates that the level whill move towards
 var target: Vector2
+# Indicates that the level has finished setting up
+signal level_ready(lane_count: int, lane_height: int, bottom_lane_y_coord: float)
+# The number of lanes in the level
+var lane_count: int
+# The distance between each lane in pixels
+var lane_height: int
+# The y coordinate for the first (lowest) lane in the level
+var bottom_lane_y_coord: float
 
 func _spawn_area(selected_arrangement):
 	var loaded_area = selected_arrangement.instantiate() as Area2D
@@ -20,3 +28,9 @@ func _ready():
 func _process(delta):
 	# Steadily move the level to the left
 	position = position.move_toward(target, delta * move_speed)
+	
+	# Set defaults for all subsequent levels
+	lane_count = 1
+	lane_height = 32
+	bottom_lane_y_coord = get_viewport_rect().size.y - lane_height
+	level_ready.emit(lane_count, lane_height, bottom_lane_y_coord)
