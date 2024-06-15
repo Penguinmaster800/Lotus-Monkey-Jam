@@ -1,23 +1,170 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmnqt8clmde7e"]
+[gd_scene load_steps=9 format=3 uid="uid://crkpol255wmus"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
-[ext_resource type="Texture2D" uid="uid://2nc1r1ptpgsn" path="res://graphics/placeholders/start button.png" id="2_5allw"]
+[ext_resource type="Texture2D" uid="uid://bdxhwf40fs4an" path="res://graphics/sprites/monkey_base_one.png" id="2_wy5yc"]
+[ext_resource type="Texture2D" uid="uid://dsefxvheggfrj" path="res://graphics/sprites/monkey_base_two.png" id="3_urf87"]
+[ext_resource type="Texture2D" uid="uid://o8qo0eeqi1x7" path="res://graphics/sprites/monkey_base_one_happy.png" id="4_0cdnc"]
+[ext_resource type="Texture2D" uid="uid://c4bookwf8rove" path="res://graphics/sprites/monkey_base_two_happy.png" id="5_s1waa"]
+[ext_resource type="Texture2D" uid="uid://cshlho6a5v4ch" path="res://graphics/sprites/monkey_base_one_lookback.png" id="6_iwyyb"]
+[ext_resource type="Texture2D" uid="uid://cwloretllr47b" path="res://graphics/sprites/monkey_base_two_lookback.png" id="7_ift6o"]
 
-[node name="MarginContainer" type="MarginContainer"]
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.2
-anchor_right = 0.8
-anchor_bottom = 0.8
+[sub_resource type="SpriteFrames" id="SpriteFrames_riukj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wy5yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_urf87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0cdnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s1waa")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_iwyyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ift6o")
+}],
+"loop": true,
+"name": &"look",
+"speed": 2.0
+}]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hvpf8")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.770712, 0.879824, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -38.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Super Monkey Title"
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/VBoxContainer/Title"]
+layout_mode = 2
+offset_top = 24.0
+offset_right = 101.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 8
+text = "A Monkey Jam 2024 Game"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 180
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_previous = NodePath("../QuitButton")
+theme_override_font_sizes/font_size = 8
+text = "Play"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_next = NodePath("../QuitButton")
+theme_override_font_sizes/font_size = 8
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_next = NodePath("../PlayButton")
+focus_previous = NodePath("../CreditsButton")
+theme_override_font_sizes/font_size = 8
+text = "Quit"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="MuteButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_5allw")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 8
+text = "M"
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="FullscreenButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 8
+text = "W"
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer/Control"]
+position = Vector2(-17, 15)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_riukj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
