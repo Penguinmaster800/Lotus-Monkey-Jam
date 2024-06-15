@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Lotus Monkey Jam"
-run/main_scene="res://scenes/levels/area1.tscn"
+run/main_scene="res://scenes/levels/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Status="*res://globals/status.gd"
+LoadingTransition="*res://globals/loading_transition.tscn"
 
 [display]
 
@@ -28,5 +29,6 @@ window/stretch/scale_mode="integer"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

@@ -13,5 +13,6 @@ var selected_arrangement = layout_options[randi()%len(layout_options)]
 
 
 
-func _ready():
-	_on_chosen_area(selected_arrangement)
+
+#_spawn_area(selected_arrangement)
+#	pass
