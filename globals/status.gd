@@ -15,4 +15,4 @@ var stamina: int = 100:
 		stat_change.emit()
 
 #current area for spawn list
-var current_area: int = 1
+var current_area = [1,2,3]
