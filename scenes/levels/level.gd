@@ -16,9 +16,6 @@ var lane_height: int
 # The y coordinate for the first (lowest) lane in the level
 var bottom_lane_y_coord: float
 
-func _spawn_area(selected_arrangement):
-	var loaded_area = selected_arrangement.instantiate() as Area2D
-	print(selected_arrangement)
 
 func _ready():
 	# Set the target for the level to be far to the left so it appears like the
