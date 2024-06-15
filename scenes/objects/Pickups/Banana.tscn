@@ -9,6 +9,7 @@ size = Vector2(7, 7.5)
 [node name="Banana" type="Node2D"]
 
 [node name="Banana" type="Area2D" parent="."]
+collision_layer = 4
 script = ExtResource("1_ervxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banana"]
