@@ -21,13 +21,12 @@ func _ready():
 	# Set the target for the level to be far to the left so it appears like the
 	#  the player is moving to the right
 	target = Vector2(position.x - level_length, position.y)
-
-func _process(delta):
-	# Steadily move the level to the left
-	position = position.move_toward(target, delta * move_speed)
-	
 	# Set defaults for all subsequent levels
 	lane_count = 1
 	lane_height = 32
 	bottom_lane_y_coord = get_viewport_rect().size.y - lane_height
 	level_ready.emit(lane_count, lane_height, bottom_lane_y_coord)
+
+func _process(delta):
+	# Steadily move the level to the left
+	position = position.move_toward(target, delta * move_speed)

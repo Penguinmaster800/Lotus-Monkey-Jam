@@ -12,6 +12,7 @@ script = ExtResource("1_nwyg2")
 [node name="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" type="Node" parent="."]
 
 [node name="Player" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" instance=ExtResource("1_q7gta")]
-position = Vector2(-13, 94)
+
+[node name="Hud" parent="." instance=ExtResource("3_o0sr6")]
 
 [connection signal="level_ready" from="." to="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically/Player" method="_on_level_level_ready"]
