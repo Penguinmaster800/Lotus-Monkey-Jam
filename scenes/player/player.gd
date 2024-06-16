@@ -20,6 +20,7 @@ var target
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = position
+	Status.stat_change.connect(_on_stat_change)
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,3 +68,6 @@ func _on_level_level_ready(level_lane_count, level_lane_height, level_bottom_lan
 	# Set the initial target for the 
 	target = Vector2(START_X_COORD, start_y_coord)
 	is_moving = true
+
+func _on_stat_change():
+	$TextureProgressBar.value = Status.stamina
