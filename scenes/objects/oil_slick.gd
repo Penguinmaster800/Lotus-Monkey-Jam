@@ -8,7 +8,7 @@ func _ready():
 	stamina_drain_rate = 1.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if drain_stamina:
 		Status.stamina = clampi(Status.stamina - stamina_drain_rate, 0, 100)
 
@@ -16,8 +16,8 @@ func _process(delta):
 	#if (event.is_action_pressed("debug_oil_slick")):
 	#	drain_stamina = not drain_stamina
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	drain_stamina = true
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	drain_stamina = false
