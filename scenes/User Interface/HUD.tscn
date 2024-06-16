@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://ovg3lf4ojt6v"]
+[gd_scene load_steps=13 format=3 uid="uid://ovg3lf4ojt6v"]
 
 [ext_resource type="Texture2D" uid="uid://bvdjfqf0l7vyh" path="res://graphics/sprites/monkey_16x16_neutral_one.png" id="1_sixr2"]
+[ext_resource type="PackedScene" uid="uid://ft80xl83tqyx" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
+[ext_resource type="PackedScene" uid="uid://cf3sxg1j5l6gs" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okn73"]
 corner_radius_top_left = 3
@@ -118,3 +120,25 @@ editable = false
 tick_count = 8
 ticks_on_borders = true
 metadata/_edit_lock_ = true
+
+[node name="MuteButton" parent="." instance=ExtResource("2_c6xjl")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FullScreenButton" parent="." instance=ExtResource("3_xra86")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 0.0
+offset_bottom = 24.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
