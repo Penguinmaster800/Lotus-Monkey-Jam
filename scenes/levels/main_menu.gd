@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	$MarginContainer/Control/AnimatedSprite2D.play()
-
 func _on_quit_button_pressed():
 	get_tree().quit()
 
