@@ -35,19 +35,19 @@ func _ready():
 	Status.connect("stat_change", flag_stats)
 	Status.connect("speed_change", update_speed)
 	Status.connect("time_change", flag_time)
-	Status.connect("area_change", update_area)
-	update_area()
+	#Status.connect("area_change", update_area)
+	#update_area()
 	
 	
 
 
-func update_area():
-	if Status.current_area == 1:
-		$AudioStreamPlayer.play()
-	if Status.current_area == 2:
-		$AudioStreamPlayer.play()
-	if Status.current_area == 3:
-		$AudioStreamPlayer.play()
+#func update_area():
+	#if Status.current_area == 1:
+	#	$AudioStreamPlayer.instantiate_playback("res://graphics/Music/Aylex - Fun is Fun (freetouse.com)Level-1.mp3")
+	#if Status.current_area == 2:
+	#	$AudioStreamPlayer.instantiate_playback("res://graphics/Music/Aylex - Spring (freetouse.com)Level-2.mp3")
+	#if Status.current_area == 3:
+	#	$AudioStreamPlayer.instantiate_playback("res://graphics/Music/Piki - Happy Walking (freetouse.com)(Level3).mp3")
 
 
 func update_sky():
