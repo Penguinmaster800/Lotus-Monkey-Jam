@@ -1,10 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv4dpeqg4xu1s"]
+[gd_scene load_steps=5 format=3 uid="uid://cv4dpeqg4xu1s"]
 
 [ext_resource type="Script" path="res://scenes/objects/slowing surface/Gravel.gd" id="1_fetfv"]
+
+[sub_resource type="Gradient" id="Gradient_wmlbp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_183pp"]
+gradient = SubResource("Gradient_wmlbp")
+fill_from = Vector2(0.321739, 0.46087)
+fill_to = Vector2(0.565217, 0.430435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yojs0"]
+size = Vector2(64, 22)
 
 [node name="SlowingSurface" type="Area2D"]
 script = ExtResource("1_fetfv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(1, 0.34375)
+texture = SubResource("GradientTexture2D_183pp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_yojs0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
