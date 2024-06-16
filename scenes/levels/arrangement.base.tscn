@@ -68,5 +68,10 @@ collision_layer = 8
 position = Vector2(941.5, 92)
 shape = SubResource("RectangleShape2D_y20eq")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
 [connection signal="loading_area_entered" from="." to="." method="_on_loading_area_entered"]
 [connection signal="body_entered" from="LoadingArea" to="." method="_on_loading_area_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

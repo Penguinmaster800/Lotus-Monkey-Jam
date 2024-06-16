@@ -11,17 +11,16 @@ var counter = 1
 #selection of which arrangement to load
 var layout_options := [arrangement_2, arrangement_3]
 var random_arrangement = layout_options[randi()%len(layout_options)]
-
 func _randomize_arrangement():
 	random_arrangement = layout_options[randi()%len(layout_options)]
+
 
 func _ready():
 	_spawn_first_area(arrangement_1)
 	_spawn_second_area(arrangement_2)
 	counter = 2
-	Status.current_area = 1
-	print("area1")
-
+	print("area2")
+	
 	super._ready()
 
 func _spawn_first_area(selected_arrangement):
@@ -48,5 +47,3 @@ func _spawn_area(random_arrangement):
 	loaded_area.loading_area_entered.connect(_on_loaded_area_body_entered)
 	_randomize_arrangement()
 	Status.progress -= 1
-
-
