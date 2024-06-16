@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4v0oyhh7vw7q" path="res://graphics/spritesheet/assets_16x16_spritesheet.png" id="2_i41is"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w3hxu"]
-radius = 15.1327
+radius = 5.09902
 
 [node name="OilSlick" type="Area2D"]
 collision_layer = 4
