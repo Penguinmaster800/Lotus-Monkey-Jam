@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://decldjxo0vc6c"]
 
 [ext_resource type="Script" path="res://scenes/objects/oil_slick.gd" id="1_ixm03"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nxcww"]
+[ext_resource type="Texture2D" uid="uid://c4v0oyhh7vw7q" path="res://graphics/spritesheet/assets_16x16_spritesheet.png" id="2_i41is"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w3hxu"]
 radius = 15.1327
@@ -12,9 +11,11 @@ collision_layer = 4
 script = ExtResource("1_ixm03")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(32, 32)
-texture = SubResource("PlaceholderTexture2D_nxcww")
-metadata/_edit_lock_ = true
+position = Vector2(4, -4)
+texture = ExtResource("2_i41is")
+hframes = 2
+vframes = 6
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_w3hxu")
