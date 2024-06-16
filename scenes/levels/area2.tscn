@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd22k5p52r76d"]
 
 [ext_resource type="PackedScene" uid="uid://cmolia7juxj0s" path="res://scenes/levels/level.tscn" id="1_g1wjy"]
-[ext_resource type="Script" path="res://scenes/levels/area1.gd" id="2_p44cx"]
+[ext_resource type="Script" path="res://scenes/levels/area2.gd" id="2_0fjvv"]
 
 [node name="Area2" instance=ExtResource("1_g1wjy")]
-script = ExtResource("2_p44cx")
+script = ExtResource("2_0fjvv")

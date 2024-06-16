@@ -24,4 +24,4 @@ var progress: int = 10:
 var current_area = 1
 
 
-	
+
