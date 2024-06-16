@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/User Interface/HUD.gd" id="1_q6646"]
 [ext_resource type="Texture2D" uid="uid://bvdjfqf0l7vyh" path="res://graphics/sprites/monkey_16x16_neutral_one.png" id="1_sixr2"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
+[ext_resource type="PackedScene" uid="uid://ft80xl83tqyx" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
+[ext_resource type="PackedScene" uid="uid://cf3sxg1j5l6gs" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okn73"]
 corner_radius_top_left = 3
