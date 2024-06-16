@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://ovg3lf4ojt6v"]
+[gd_scene load_steps=15 format=3 uid="uid://ovg3lf4ojt6v"]
 
 [ext_resource type="Script" path="res://scenes/User Interface/HUD.gd" id="1_q6646"]
 [ext_resource type="Texture2D" uid="uid://bvdjfqf0l7vyh" path="res://graphics/sprites/monkey_16x16_neutral_one.png" id="1_sixr2"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
+[ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="2_8fwjv"]
+[ext_resource type="PackedScene" uid="uid://de8xi6ucmqt5b" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
+[ext_resource type="PackedScene" uid="uid://dlo6hicttup6m" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okn73"]
 corner_radius_top_left = 3
@@ -94,8 +95,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "00:00:00"
+theme = ExtResource("2_8fwjv")
+text = "00:00"
 label_settings = SubResource("LabelSettings_d6jxd")
+horizontal_alignment = 1
 
 [node name="LevelProgress" type="Control" parent="."]
 layout_mode = 3
@@ -135,6 +138,7 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("2_8fwjv")
 
 [node name="FullScreenButton" parent="." instance=ExtResource("3_xra86")]
 anchors_preset = 0
@@ -148,3 +152,4 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("2_8fwjv")

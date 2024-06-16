@@ -50,10 +50,14 @@ func check_health():
 
 func check_stamina():
 	if Status.stamina <= 1:
-		Status.speed -= 90
-		$StaminaRestore.start()
-	if Status.stamina >= 100:
-		Status.speed += 100
+		if Status.speed >= 100:
+			Status.speed -= 90
+			$StaminaRestore.start()
+		else: pass
+	if Status.stamina >= 40:
+		if Status.speed <= 100:
+			Status.speed += 90
+		else: pass
 
 func reach_end():
 	if progress_so_far <= 1:
@@ -67,7 +71,7 @@ func _process(delta):
 
 func _on_stamina_restore_timeout():
 	if Status.stamina <= 100:
-		Status.stamina += 10
+		Status.stamina += 60
 
 func _on_stamina_drain_timeout():
 	Status.stamina -=1
