@@ -1,6 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://crkpol255wmus"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
+
 [ext_resource type="PackedScene" uid="uid://ft80xl83tqyx" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
 [ext_resource type="Texture2D" uid="uid://bdxhwf40fs4an" path="res://graphics/sprites/monkey_base_one.png" id="2_wy5yc"]
 [ext_resource type="PackedScene" uid="uid://cf3sxg1j5l6gs" path="res://scenes/User Interface/full_screen_button.tscn" id="3_3gmuu"]
