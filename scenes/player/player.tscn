@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=10 format=3 uid="uid://kgbtcvcvph7k"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
 [ext_resource type="Texture2D" uid="uid://ci8juhrwv13sj" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
-[ext_resource type="Texture2D" uid="uid://dxm4nhreyyic" path="res://graphics/spritesheet/Bana.png" id="3_1k251"]
+[ext_resource type="Texture2D" uid="uid://ci8mxlbe8fd3m" path="res://graphics/sprites/banana_empty.png" id="3_pfnma"]
+[ext_resource type="Texture2D" uid="uid://y8epqhv34wa" path="res://graphics/sprites/banana_full.png" id="4_al2em"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
 atlas = ExtResource("1_s705a")
@@ -57,4 +58,5 @@ offset_right = -12.0
 offset_bottom = -6.0
 value = 50.0
 fill_mode = 3
-texture_progress = ExtResource("3_1k251")
+texture_under = ExtResource("3_pfnma")
+texture_progress = ExtResource("4_al2em")
