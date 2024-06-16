@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://byq5fo2pjgajm"]
 
 [ext_resource type="Script" path="res://scenes/objects/Pothole/pothole.gd" id="1_hui5s"]
-[ext_resource type="Texture2D" uid="uid://d3uxr4171r7af" path="res://graphics/spritesheet/potholes_16x16_spritesheet.png" id="2_criq6"]
+[ext_resource type="Texture2D" uid="uid://d3uxr4171r7af" path="res://graphics/spritesheet/potholes_16x16_spritesheet.png" id="2_577ne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vspcr"]
+size = Vector2(10, 6)
 
 [node name="CollisionObject" type="Area2D"]
 visibility_layer = 4
@@ -13,6 +14,6 @@ script = ExtResource("1_hui5s")
 shape = SubResource("RectangleShape2D_vspcr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_criq6")
+position = Vector2(0, -3)
+texture = ExtResource("2_577ne")
 hframes = 2
-frame = 1

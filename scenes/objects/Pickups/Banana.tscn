@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dxm4nhreyyic" path="res://graphics/spritesheet/Bana.png" id="2_02mjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5q5r1"]
-size = Vector2(7, 11.75)
+size = Vector2(7, 7.5)
 
 [node name="Banana" type="Node2D"]
 position = Vector2(1, 8)
@@ -15,8 +15,7 @@ script = ExtResource("1_ervxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banana"]
 visibility_layer = 4
-
-position = Vector2(-1, -8.125)
+position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_5q5r1")
 
 [node name="Sprite2d" type="Sprite2D" parent="Banana"]
