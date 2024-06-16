@@ -26,6 +26,7 @@ grow_vertical = 2
 texture = ExtResource("2_bsd4c")
 
 [node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 112.0
 offset_top = 127.369
 offset_right = 152.0
@@ -36,6 +37,7 @@ texture_pressed = ExtResource("4_tbsjf")
 texture_hover = ExtResource("4_tbsjf")
 
 [node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 151.0
 offset_top = 129.369
 offset_right = 193.0
