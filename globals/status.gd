@@ -25,7 +25,4 @@ var progress: int = 10:
 var current_area = 1
 
 
-func stamheal():
-	stamina += 1
-	print(stamina)
 	
