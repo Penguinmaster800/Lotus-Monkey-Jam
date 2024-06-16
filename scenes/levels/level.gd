@@ -2,7 +2,7 @@ extends Node2D
 class_name LevelParent
 
 # The speed at which the level moves in pixels/sec
-@export var move_speed: int = 500
+@export var move_speed: int = 200
 # The length of the level in pixels
 @export var level_length: int = 10000
 # The target coordinates that the level whill move towards

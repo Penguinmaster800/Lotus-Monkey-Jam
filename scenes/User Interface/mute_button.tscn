@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ft80xl83tqyx"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_eo6ba"]
+device = -1
+keycode = 77
+unicode = 109
+
+[sub_resource type="Shortcut" id="Shortcut_1q6m0"]
+events = [SubResource("InputEventKey_eo6ba")]
+
+[node name="MuteButton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 8
+shortcut = SubResource("Shortcut_1q6m0")
+text = "M"
