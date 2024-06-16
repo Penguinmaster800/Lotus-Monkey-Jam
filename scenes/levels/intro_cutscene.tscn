@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lfc72owb3kdv"]
+[gd_scene load_steps=10 format=3 uid="uid://lfc72owb3kdv"]
 
 [ext_resource type="Script" path="res://IntroCutscene.gd" id="1_qofev"]
 [ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="2_exgv1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dkdkcupreu08o" path="res://graphics/placeholders/temp 3.png" id="4_y3v5j"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="5_ruvrb"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="6_kmcuq"]
+[ext_resource type="AudioStream" uid="uid://cp362xecy0nbd" path="res://graphics/Music/578969__nomiqbomi__suggestion-5(levelcomplete).mp3" id="7_3mhft"]
 
 [sub_resource type="Animation" id="Animation_hjtcs"]
 resource_name = "Intro"
@@ -98,5 +99,10 @@ scale = Vector2(2.882, 2.882)
 texture_normal = ExtResource("5_ruvrb")
 texture_pressed = ExtResource("6_kmcuq")
 texture_hover = ExtResource("6_kmcuq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3mhft")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
