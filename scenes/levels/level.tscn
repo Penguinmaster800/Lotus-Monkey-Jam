@@ -39,4 +39,12 @@ color = Color(0, 0.901802, 0.322045, 1)
 [node name="OilSlick" parent="." instance=ExtResource("4_luxru")]
 visible = false
 
+[node name="StaminaDrain" type="Timer" parent="."]
+autostart = true
+
+[node name="StaminaRestore" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="level_ready" from="." to="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically/Player" method="_on_level_level_ready"]
+[connection signal="timeout" from="StaminaDrain" to="." method="_on_stamina_drain_timeout"]
+[connection signal="timeout" from="StaminaRestore" to="." method="_on_stamina_restore_timeout"]

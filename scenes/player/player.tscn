@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=12 format=3 uid="uid://kgbtcvcvph7k"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
 [ext_resource type="Texture2D" uid="uid://ci8juhrwv13sj" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
 [ext_resource type="Texture2D" uid="uid://ci8mxlbe8fd3m" path="res://graphics/sprites/banana_empty.png" id="3_pfnma"]
+[ext_resource type="Shader" path="res://scenes/player/player.gdshader" id="3_rpkhh"]
 [ext_resource type="Texture2D" uid="uid://y8epqhv34wa" path="res://graphics/sprites/banana_full.png" id="4_al2em"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
@@ -35,10 +36,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc2g"]
-size = Vector2(19, 20.5)
+size = Vector2(10.5882, 11.7647)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0v4l0"]
+shader = ExtResource("3_rpkhh")
+shader_parameter/line_color = Vector4(0.2, 0.2, 0.8, 1)
+shader_parameter/line_thickness = 0.438
 
 [node name="Monkee" type="CharacterBody2D"]
-position = Vector2(-13, 106)
+position = Vector2(2.74181e-06, 0.999983)
+scale = Vector2(0.85, 0.85)
 collision_mask = 13
 script = ExtResource("1_chkfc")
 
@@ -48,14 +55,16 @@ sprite_frames = SubResource("SpriteFrames_uk76s")
 frame_progress = 0.498843
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -14.75)
+position = Vector2(-0.588238, -14.1176)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8bc2g")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = -28.0
-offset_top = -22.0
-offset_right = -12.0
-offset_bottom = -6.0
+material = SubResource("ShaderMaterial_0v4l0")
+offset_left = -18.8235
+offset_top = -32.9412
+offset_right = -2.82353
+offset_bottom = -16.9412
 value = 50.0
 fill_mode = 3
 texture_under = ExtResource("3_pfnma")
