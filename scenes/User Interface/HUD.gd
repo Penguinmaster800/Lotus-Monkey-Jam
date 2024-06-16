@@ -13,4 +13,4 @@ func _on_status_stat_change():
 	$Stamina/ProgressBar.value = Status.stamina
 
 func _on_progress_change():
-	$LevelProgress/ProgressBar.value = Status.progress
+	$LevelProgress/ProgressBar.value = 10 - Status.progress
