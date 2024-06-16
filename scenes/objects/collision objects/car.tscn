@@ -1,38 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcw8d4rs40s4d"]
+[gd_scene load_steps=5 format=3 uid="uid://bcw8d4rs40s4d"]
 
 [ext_resource type="PackedScene" uid="uid://df0l8sk53x8qw" path="res://scenes/objects/collision objects/collision_object.tscn" id="1_mbb3d"]
+[ext_resource type="Texture2D" uid="uid://bxveu8j8sxdad" path="res://graphics/spritesheet/assets_32x32_spritesheet.png" id="2_el42g"]
 
 [sub_resource type="GDScript" id="GDScript_jxysc"]
 script/source = "extends Area2D
 
-func _on_body_entered(_body):
+func _on_body_entered(body):
 	Status.lives -= 1
 	print(\"lives\")
-	print(Status.lives)
-
+	print(Status.lives)# Replace with function body.
+area
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxc"]
-size = Vector2(20, 11)
-
-[sub_resource type="Gradient" id="Gradient_lvl5f"]
-offsets = PackedFloat32Array(0, 0.843373, 0.933735)
-colors = PackedColorArray(0, 0, 0, 1, 0.419704, 0, 0.0232718, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kuw3c"]
-gradient = SubResource("Gradient_lvl5f")
+size = Vector2(24, 7)
 
 [node name="CollisionObject" instance=ExtResource("1_mbb3d")]
 visibility_layer = 4
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -5.5)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_r1vxc")
 
 [node name="Sprite2D" parent="." index="1"]
-position = Vector2(0, -5.5)
-scale = Vector2(0.3125, 0.171875)
-texture = SubResource("GradientTexture2D_kuw3c")
+texture = ExtResource("2_el42g")
+hframes = 2
+vframes = 3
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
