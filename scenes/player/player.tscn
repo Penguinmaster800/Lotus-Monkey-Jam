@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://kgbtcvcvph7k"]
+[gd_scene load_steps=9 format=3 uid="uid://kgbtcvcvph7k"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_chkfc"]
-[ext_resource type="Texture2D" uid="uid://v4nxtpki8br2" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
+[ext_resource type="Texture2D" uid="uid://ci8juhrwv13sj" path="res://graphics/spritesheet/monkey_base_spritesheet.png" id="1_s705a"]
 [ext_resource type="Texture2D" uid="uid://dxm4nhreyyic" path="res://graphics/spritesheet/Bana.png" id="3_1k251"]
-[ext_resource type="Texture2D" uid="uid://c4v0oyhh7vw7q" path="res://graphics/spritesheet/assets_16x16_spritesheet.png" id="3_s4xet"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ug8h"]
 atlas = ExtResource("1_s705a")
@@ -37,27 +36,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc2g"]
 size = Vector2(19, 20.5)
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_mm275"]
-frames = 15
-frame_0/texture = ExtResource("3_s4xet")
-frame_0/duration = 0.0
-frame_1/duration = 1.0
-frame_2/duration = 1.0
-frame_3/duration = 1.0
-frame_4/duration = 1.0
-frame_5/duration = 1.0
-frame_6/duration = 1.0
-frame_7/duration = 1.0
-frame_8/duration = 1.0
-frame_9/duration = 1.0
-frame_10/duration = 1.0
-frame_11/duration = 1.0
-frame_12/duration = 1.0
-frame_13/duration = 1.0
-frame_14/duration = 1.0
-
 [node name="Monkee" type="CharacterBody2D"]
-scale = Vector2(0.67, 0.67)
 collision_mask = 13
 script = ExtResource("1_chkfc")
 
@@ -77,5 +56,4 @@ offset_right = -12.0
 offset_bottom = -6.0
 value = 50.0
 fill_mode = 3
-texture_under = SubResource("AnimatedTexture_mm275")
 texture_progress = ExtResource("3_1k251")
