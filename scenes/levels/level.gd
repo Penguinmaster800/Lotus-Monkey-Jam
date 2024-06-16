@@ -34,6 +34,7 @@ func _ready():
 	Status.connect("progress_change", current_progress)
 	Status.connect("stat_change", flag_stats)
 	Status.connect("speed_change", update_speed)
+	Status.connect("time_change", flag_time)
 	
 func current_progress():
 	progress_so_far = int(Status.progress)
@@ -58,6 +59,10 @@ func check_stamina():
 		if Status.speed <= 100:
 			Status.speed += 90
 		else: pass
+
+func flag_time():
+	if Status.time_remaining <= 0:
+		LoadingTransition.change_scene("res://scenes/levels/time_out_cutscene.tscn")
 
 func reach_end():
 	if progress_so_far <= 1:
