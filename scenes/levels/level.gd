@@ -20,6 +20,7 @@ var progress_so_far = 10
 
 
 func _ready():
+	move_speed = Status.speed
 	# Set the target for the level to be far to the left so it appears like the
 	#  the player is moving to the right
 	target = Vector2(position.x - level_length, position.y)
