@@ -23,6 +23,4 @@ var progress: int = 10:
 #current area for spawn list
 var current_area = 1
 
-
 var speed = 100
-
