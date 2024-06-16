@@ -1,17 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://crkpol255wmus"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
-
-
-[ext_resource type="PackedScene" uid="uid://ft80xl83tqyx" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
+[ext_resource type="PackedScene" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
 [ext_resource type="Texture2D" uid="uid://bdxhwf40fs4an" path="res://graphics/sprites/monkey_base_one.png" id="2_wy5yc"]
-[ext_resource type="PackedScene" uid="uid://cf3sxg1j5l6gs" path="res://scenes/User Interface/full_screen_button.tscn" id="3_3gmuu"]
+[ext_resource type="PackedScene" path="res://scenes/User Interface/full_screen_button.tscn" id="3_3gmuu"]
 [ext_resource type="Texture2D" uid="uid://dsefxvheggfrj" path="res://graphics/sprites/monkey_base_two.png" id="3_urf87"]
 [ext_resource type="Texture2D" uid="uid://o8qo0eeqi1x7" path="res://graphics/sprites/monkey_base_one_happy.png" id="4_0cdnc"]
 [ext_resource type="Texture2D" uid="uid://c4bookwf8rove" path="res://graphics/sprites/monkey_base_two_happy.png" id="5_s1waa"]
 [ext_resource type="Texture2D" uid="uid://cshlho6a5v4ch" path="res://graphics/sprites/monkey_base_one_lookback.png" id="6_iwyyb"]
 [ext_resource type="Texture2D" uid="uid://cwloretllr47b" path="res://graphics/sprites/monkey_base_two_lookback.png" id="7_ift6o"]
-
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_riukj"]
 animations = [{
