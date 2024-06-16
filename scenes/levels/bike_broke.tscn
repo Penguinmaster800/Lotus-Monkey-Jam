@@ -1,12 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkpg15n31ja6o"]
+[gd_scene load_steps=7 format=3 uid="uid://bkpg15n31ja6o"]
 
-[ext_resource type="Script" path="res://IntroCutscene.gd" id="1_fmod4"]
+[ext_resource type="Script" path="res://scenes/levels/bike_broke.gd" id="1_x1xek"]
+[ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="2_0llty"]
+[ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="2_vudha"]
+[ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_fu1r4"]
+[ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="5_5vk3f"]
+[ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="6_8np2f"]
 
-[node name="IntroCutscene" type="Node2D"]
-script = ExtResource("1_fmod4")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="BikeBroke" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x1xek")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vudha")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 89.0
+offset_top = 110.0
+offset_right = 129.0
+offset_bottom = 150.0
+rotation = -0.314391
+texture_normal = ExtResource("2_0llty")
+texture_pressed = ExtResource("3_fu1r4")
+texture_hover = ExtResource("3_fu1r4")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 170.0
+offset_bottom = 152.0
+rotation = -0.238683
+texture_normal = ExtResource("5_5vk3f")
+texture_pressed = ExtResource("6_8np2f")
+texture_hover = ExtResource("6_8np2f")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

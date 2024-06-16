@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dinnhlf8ia5a2"]
+[gd_scene load_steps=3 format=3 uid="uid://cmbe8kacx83da"]
 
 [sub_resource type="GDScript" id="GDScript_oqcbe"]
 script/source = "extends Area2D
 
 
 
-func _on_body_entered(body):
-	
+func _on_body_entered(_body):
+	Status.lives -= 1
+	print(\"lives\")
+	print(Status.lives)# Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqlyy"]
