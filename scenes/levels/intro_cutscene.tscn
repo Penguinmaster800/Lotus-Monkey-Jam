@@ -82,16 +82,19 @@ texture = ExtResource("2_exgv1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 scale = Vector2(2.49625, 2.5021)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayButton" type="TextureButton" parent="."]
-offset_left = 737.5
-offset_top = 402.5
-offset_right = 777.5
-offset_bottom = 442.5
+layout_mode = 0
+offset_left = 675.0
+offset_top = 360.0
+offset_right = 715.0
+offset_bottom = 400.0
 rotation = -0.314391
+scale = Vector2(2.882, 2.882)
 texture_normal = ExtResource("5_ruvrb")
 texture_pressed = ExtResource("6_kmcuq")
 texture_hover = ExtResource("6_kmcuq")

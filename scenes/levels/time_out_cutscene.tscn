@@ -26,6 +26,7 @@ grow_vertical = 2
 texture = ExtResource("1_gbli2")
 
 [node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 89.0
 offset_top = 110.0
 offset_right = 129.0
@@ -36,6 +37,7 @@ texture_pressed = ExtResource("3_640wd")
 texture_hover = ExtResource("3_640wd")
 
 [node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 112.0
 offset_right = 170.0

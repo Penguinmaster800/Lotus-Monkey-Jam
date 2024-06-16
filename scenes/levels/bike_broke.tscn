@@ -9,7 +9,12 @@
 
 [node name="BikeBroke" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
 script = ExtResource("1_x1xek")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -22,6 +27,7 @@ grow_vertical = 2
 texture = ExtResource("2_vudha")
 
 [node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 89.0
 offset_top = 110.0
 offset_right = 129.0
@@ -32,6 +38,7 @@ texture_pressed = ExtResource("3_fu1r4")
 texture_hover = ExtResource("3_fu1r4")
 
 [node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 112.0
 offset_right = 170.0
