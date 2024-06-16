@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://ovg3lf4ojt6v"]
+[gd_scene load_steps=16 format=3 uid="uid://ovg3lf4ojt6v"]
 
 [ext_resource type="Script" path="res://scenes/User Interface/HUD.gd" id="1_q6646"]
 [ext_resource type="Texture2D" uid="uid://bvdjfqf0l7vyh" path="res://graphics/sprites/monkey_16x16_neutral_one.png" id="1_sixr2"]
 [ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="2_8fwjv"]
 [ext_resource type="PackedScene" uid="uid://de8xi6ucmqt5b" path="res://scenes/User Interface/mute_button.tscn" id="2_c6xjl"]
+[ext_resource type="Script" path="res://scenes/User Interface/TimeLeftPanel.gd" id="2_h5o7l"]
 [ext_resource type="PackedScene" uid="uid://dlo6hicttup6m" path="res://scenes/User Interface/full_screen_button.tscn" id="3_xra86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okn73"]
@@ -87,18 +88,49 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_i4i3m")
 theme_override_styles/panel = SubResource("StyleBoxFlat_51ux7")
+script = ExtResource("2_h5o7l")
 
-[node name="TimeLeft" type="Label" parent="TimeLeft/TimeLeftPanel"]
+[node name="Minute" type="Label" parent="TimeLeft/TimeLeftPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_8fwjv")
-text = "00:00"
+text = "00:"
 label_settings = SubResource("LabelSettings_d6jxd")
-horizontal_alignment = 1
+horizontal_alignment = 2
+
+[node name="Second" type="Label" parent="TimeLeft/TimeLeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8fwjv")
+text = "00:"
+label_settings = SubResource("LabelSettings_d6jxd")
+horizontal_alignment = 2
+
+[node name="Millisecond" type="Label" parent="TimeLeft/TimeLeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8fwjv")
+text = "000"
+label_settings = SubResource("LabelSettings_d6jxd")
+horizontal_alignment = 2
 
 [node name="LevelProgress" type="Control" parent="."]
 layout_mode = 3
@@ -152,4 +184,3 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("2_8fwjv")

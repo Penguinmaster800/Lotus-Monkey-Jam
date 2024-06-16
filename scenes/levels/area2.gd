@@ -19,6 +19,8 @@ func _ready():
 	_spawn_first_area(arrangement_1)
 	_spawn_second_area(arrangement_2)
 	counter = 2
+	Status.speed = 200
+	Status.time_remaining = 70
 	print("area2")
 	
 	super._ready()

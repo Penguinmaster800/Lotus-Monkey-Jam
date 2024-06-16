@@ -3,6 +3,7 @@ extends Node
 signal stat_change
 signal progress_change
 signal speed_change
+signal time_change
 
 #variables of  player stats
 var lives: int = 5:
@@ -28,3 +29,8 @@ var speed = 150:
 	set(value):
 		speed = value
 		speed_change.emit()
+
+var time_remaining = 70:
+	set(value):
+		time_remaining = value
+		time_change.emit()
