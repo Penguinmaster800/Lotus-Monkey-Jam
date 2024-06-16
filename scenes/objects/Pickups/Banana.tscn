@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3bwpkuywsstt"]
 
 [ext_resource type="Script" path="res://scenes/scripts/Banana.gd" id="1_ervxg"]
-[ext_resource type="Texture2D" uid="uid://dxm4nhreyyic" path="res://graphics/spritesheet/Bana.png" id="2_02mjw"]
+[ext_resource type="Texture2D" uid="uid://c4v0oyhh7vw7q" path="res://graphics/spritesheet/assets_16x16_spritesheet.png" id="2_ukix5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5q5r1"]
 size = Vector2(7, 7.5)
@@ -15,11 +15,14 @@ script = ExtResource("1_ervxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banana"]
 visibility_layer = 4
-position = Vector2(-1, -6)
+position = Vector2(-1, -8)
 shape = SubResource("RectangleShape2D_5q5r1")
 
 [node name="Sprite2d" type="Sprite2D" parent="Banana"]
-position = Vector2(0, -8)
-texture = ExtResource("2_02mjw")
+position = Vector2(-1, -13)
+texture = ExtResource("2_ukix5")
+hframes = 3
+vframes = 6
+frame = 10
 
 [connection signal="body_entered" from="Banana" to="Banana" method="_on_body_entered"]

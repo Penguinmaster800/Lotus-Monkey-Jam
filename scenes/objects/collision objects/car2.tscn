@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjshq3fsej2kf"]
+
+[ext_resource type="PackedScene" uid="uid://df0l8sk53x8qw" path="res://scenes/objects/collision objects/collision_object.tscn" id="1_lmvjx"]
+[ext_resource type="Texture2D" uid="uid://bxveu8j8sxdad" path="res://graphics/spritesheet/assets_32x32_spritesheet.png" id="2_lae0j"]
+
+[sub_resource type="GDScript" id="GDScript_jxysc"]
+script/source = "extends Area2D
+
+func _on_body_entered(_body):
+	Status.lives -= 1
+	print(\"lives\")
+	print(Status.lives)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxc"]
+size = Vector2(28, 13.5)
+
+[sub_resource type="Animation" id="Animation_bn5ir"]
+resource_name = "driving"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_g4c5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0l3vi"]
+_data = {
+"RESET": SubResource("Animation_g4c5g"),
+"driving": SubResource("Animation_bn5ir")
+}
+
+[node name="CollisionObject" instance=ExtResource("1_lmvjx")]
+visibility_layer = 4
+script = SubResource("GDScript_jxysc")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -1.25)
+shape = SubResource("RectangleShape2D_r1vxc")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, 6)
+texture = ExtResource("2_lae0j")
+hframes = 2
+vframes = 3
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_0l3vi")
+}
+autoplay = "driving"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

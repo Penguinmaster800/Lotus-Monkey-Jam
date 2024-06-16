@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcw8d4rs40s4d"]
+[gd_scene load_steps=7 format=3 uid="uid://bcw8d4rs40s4d"]
 
 [ext_resource type="PackedScene" uid="uid://df0l8sk53x8qw" path="res://scenes/objects/collision objects/collision_object.tscn" id="1_mbb3d"]
+[ext_resource type="Texture2D" uid="uid://bxveu8j8sxdad" path="res://graphics/spritesheet/assets_32x32_spritesheet.png" id="2_ne5cn"]
 
 [sub_resource type="GDScript" id="GDScript_jxysc"]
 script/source = "extends Area2D
@@ -12,26 +13,47 @@ func _on_body_entered(_body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxc"]
-size = Vector2(20, 11)
+size = Vector2(26, 13.5)
 
-[sub_resource type="Gradient" id="Gradient_lvl5f"]
-offsets = PackedFloat32Array(0, 0.843373, 0.933735)
-colors = PackedColorArray(0, 0, 0, 1, 0.419704, 0, 0.0232718, 1, 1, 1, 1, 1)
+[sub_resource type="Animation" id="Animation_ol55j"]
+resource_name = "Driving 2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kuw3c"]
-gradient = SubResource("Gradient_lvl5f")
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wul6"]
+_data = {
+"Driving 2": SubResource("Animation_ol55j")
+}
 
 [node name="CollisionObject" instance=ExtResource("1_mbb3d")]
 visibility_layer = 4
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -5.5)
+position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_r1vxc")
 
 [node name="Sprite2D" parent="." index="1"]
 position = Vector2(0, -5.5)
-scale = Vector2(0.3125, 0.171875)
-texture = SubResource("GradientTexture2D_kuw3c")
+texture = ExtResource("2_ne5cn")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_3wul6")
+}
+autoplay = "Driving 2"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
