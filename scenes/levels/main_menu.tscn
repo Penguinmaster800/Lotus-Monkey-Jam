@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="7_gstc5"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="8_8egcm"]
 [ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="9_xh676"]
-
-[sub_resource type="AudioStream" id="AudioStream_07ooa"]
+[ext_resource type="AudioStream" uid="uid://b7y6ddrlfredw" path="res://graphics/Music/Piki - Happy Walking (freetouse.com)(Level3).mp3" id="10_8vqlb"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -103,7 +102,8 @@ theme_override_font_sizes/font_size = 16
 text = "A MonkeyJam 2024 Game"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStream_07ooa")
+stream = ExtResource("10_8vqlb")
+volume_db = -15.0
 autoplay = true
 
 [connection signal="pressed" from="TextureRect/PlayButton" to="." method="_on_play_button_pressed"]

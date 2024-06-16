@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4j462ueuaa8s"
+path="res://.godot/imported/Aylex_-_Fun_and_Catchy_freetouse.com(level 3).mp3-ec03f01a09189977060490bc1899d007.mp3str"
+
+[deps]
+
+source_file="res://graphics/Music/Aylex_-_Fun_and_Catchy_freetouse.com(level 3).mp3"
+dest_files=["res://.godot/imported/Aylex_-_Fun_and_Catchy_freetouse.com(level 3).mp3-ec03f01a09189977060490bc1899d007.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
