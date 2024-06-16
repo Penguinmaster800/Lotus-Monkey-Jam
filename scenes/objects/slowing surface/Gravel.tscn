@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cv4dpeqg4xu1s"]
+[gd_scene load_steps=2 format=3 uid="uid://cv4dpeqg4xu1s"]
+
+[ext_resource type="Script" path="res://scenes/objects/slowing surface/Gravel.gd" id="1_fetfv"]
 
 [node name="SlowingSurface" type="Area2D"]
+script = ExtResource("1_fetfv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
