@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # The height of each lane in pixels
-var lane_height: int = 0
+var lane_height: int = 36
 # The maximum (lowest lane) y coord for the player
 var max_y_coord: int = 0
 # The minimum (highest lane) y coord for the player

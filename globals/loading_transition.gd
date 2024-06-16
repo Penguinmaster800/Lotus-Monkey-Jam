@@ -11,13 +11,14 @@ func change_scene(target: String) -> void:
 
 
 func change_area() -> void:
+	Status.progress = 10
 	$AnimationPlayer.play("fade_to_black")
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file(target_area)
 	print(target_area)
 	$AnimationPlayer.play_backwards("fade_to_black")
+	await $AnimationPlayer.animation_finished
 	Status.current_area += 1
-	Status.progress = 10
 	check_area()
 
 func check_area():
