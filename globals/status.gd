@@ -9,7 +9,6 @@ var lives: int = 5:
 		lives = value
 		stat_change.emit()
 
-
 var stamina: int = 100:
 	set(value):
 		stamina = value
@@ -24,4 +23,6 @@ var progress: int = 10:
 #current area for spawn list
 var current_area = 1
 
+
 var speed = 100
+
