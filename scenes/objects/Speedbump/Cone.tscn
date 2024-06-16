@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0avmr87dsxk4"]
+
+[ext_resource type="Script" path="res://scenes/objects/Speedbump/cone.gd" id="1_s4t8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mc3s2"]
+
+[node name="Cone" type="Node2D"]
+
+[node name="cone" type="Area2D" parent="."]
+script = ExtResource("1_s4t8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cone"]
+shape = SubResource("RectangleShape2D_mc3s2")
+
+[node name="Sprite2D" type="Sprite2D" parent="cone/CollisionShape2D"]
+
+[connection signal="body_entered" from="cone" to="cone" method="_on_body_entered"]
