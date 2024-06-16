@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7y6ddrlfredw"
+path="res://.godot/imported/Piki - Happy Walking (freetouse.com)(Level3).mp3-c93452a9a2b8543b47416443d7d2941f.mp3str"
+
+[deps]
+
+source_file="res://graphics/Music/Piki - Happy Walking (freetouse.com)(Level3).mp3"
+dest_files=["res://.godot/imported/Piki - Happy Walking (freetouse.com)(Level3).mp3-c93452a9a2b8543b47416443d7d2941f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

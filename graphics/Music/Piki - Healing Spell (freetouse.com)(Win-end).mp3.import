@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbdy6m5oruxrx"
+path="res://.godot/imported/Piki - Healing Spell (freetouse.com)(Win-end).mp3-4ffdef0361a821be7015712b23fa2065.mp3str"
+
+[deps]
+
+source_file="res://graphics/Music/Piki - Healing Spell (freetouse.com)(Win-end).mp3"
+dest_files=["res://.godot/imported/Piki - Healing Spell (freetouse.com)(Win-end).mp3-4ffdef0361a821be7015712b23fa2065.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

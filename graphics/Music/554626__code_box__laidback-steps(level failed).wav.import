@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ggh6u5cpltcx"
+path="res://.godot/imported/554626__code_box__laidback-steps(level failed).wav-bf5206b02082d50c91929a7b0702d776.sample"
+
+[deps]
+
+source_file="res://graphics/Music/554626__code_box__laidback-steps(level failed).wav"
+dest_files=["res://.godot/imported/554626__code_box__laidback-steps(level failed).wav-bf5206b02082d50c91929a7b0702d776.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
