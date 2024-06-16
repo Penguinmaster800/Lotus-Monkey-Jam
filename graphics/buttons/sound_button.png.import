@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6g8eqcw02u8c"
-path="res://.godot/imported/floor_two_16x16_basic_tileset.png-5a490adc6435e9d585be6d52e6f4568d.ctex"
+uid="uid://bnh5jf4wd2da0"
+path="res://.godot/imported/sound_button.png-65ea52f7a33542ae26234a3fbc95efd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/spritesheet/floor_two_16x16_basic_tileset.png"
-dest_files=["res://.godot/imported/floor_two_16x16_basic_tileset.png-5a490adc6435e9d585be6d52e6f4568d.ctex"]
+source_file="res://graphics/buttons/sound_button.png"
+dest_files=["res://.godot/imported/sound_button.png-65ea52f7a33542ae26234a3fbc95efd9.ctex"]
 
 [params]
 
