@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://crkpol255wmus"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
-[ext_resource type="PackedScene" path="res://scenes/User Interface/full_screen_button.tscn" id="3_3gmuu"]
-[ext_resource type="Texture2D" uid="uid://bk2nhjuclh11b" path="res://graphics/sprites/start_screen_196x196_base.png" id="4_yrhn8"]
+[ext_resource type="PackedScene" uid="uid://de8xi6ucmqt5b" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
+[ext_resource type="PackedScene" uid="uid://dlo6hicttup6m" path="res://scenes/User Interface/full_screen_button.tscn" id="3_3gmuu"]
+[ext_resource type="Texture2D" uid="uid://dcdguka1axkj8" path="res://graphics/sprites/start_screen_196x196_base.png" id="4_yrhn8"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="5_ev20q"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="6_1yjr4"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="7_gstc5"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="8_8egcm"]
-[ext_resource type="Theme" path="res://globals/Font.tres" id="9_xh676"]
+[ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="9_xh676"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -31,8 +31,10 @@ color = Color(0, 0.770712, 0.879824, 1)
 [node name="MuteButton" parent="." instance=ExtResource("2_g3peu")]
 layout_mode = 2
 anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
+anchor_left = -0.040625
+anchor_top = -0.0277778
+anchor_right = -0.040625
+anchor_bottom = -0.0277778
 offset_left = 264.0
 offset_top = 153.0
 offset_right = 264.0
@@ -43,10 +45,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 290.0
-offset_top = 153.0
-offset_right = 290.0
-offset_bottom = 153.0
+offset_left = 287.0
+offset_top = 147.0
+offset_right = 287.0
+offset_bottom = 147.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
