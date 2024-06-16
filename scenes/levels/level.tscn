@@ -31,6 +31,7 @@ grow_vertical = 0
 color = Color(0, 0.901802, 0.322045, 1)
 
 [node name="Player" parent="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically" instance=ExtResource("1_q7gta")]
+position = Vector2(-131, 124)
 
 [node name="LoadedGround" type="Node2D" parent="."]
 
@@ -40,9 +41,11 @@ color = Color(0, 0.901802, 0.322045, 1)
 visible = false
 
 [node name="StaminaDrain" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [node name="StaminaRestore" type="Timer" parent="."]
+wait_time = 5.0
 one_shot = true
 
 [connection signal="level_ready" from="." to="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically/Player" method="_on_level_level_ready"]
