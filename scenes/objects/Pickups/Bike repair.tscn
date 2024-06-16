@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyet6c2ctwbrp"]
+
+[ext_resource type="Script" path="res://scenes/objects/Pickups/Area2D.gd" id="1_7mlla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olric"]
+
+[node name="BikeRepair" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+visibility_layer = 4
+script = ExtResource("1_7mlla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_olric")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

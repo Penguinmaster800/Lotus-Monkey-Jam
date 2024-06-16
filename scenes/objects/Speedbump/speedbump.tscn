@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwx41"]
 
 [node name="Speedbump" type="Area2D"]
+visibility_layer = 4
 script = ExtResource("1_0usmc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
