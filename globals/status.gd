@@ -2,6 +2,7 @@ extends Node
 #emits signal intended for UI to update whenever needed
 signal stat_change
 signal progress_change
+signal speed_change
 
 #variables of  player stats
 var lives: int = 5:
@@ -23,4 +24,7 @@ var progress: int = 10:
 #current area for spawn list
 var current_area = 1
 
-var speed = 1000
+var speed = 150:
+	set(value):
+		speed = value
+		speed_change.emit()

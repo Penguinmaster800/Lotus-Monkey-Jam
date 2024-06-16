@@ -32,11 +32,28 @@ func _ready():
 	
 	#connect signal to determine when to load new level
 	Status.connect("progress_change", current_progress)
+	Status.connect("stat_change", flag_stats)
+	Status.connect("speed_change", update_speed)
 	
 func current_progress():
 	progress_so_far = int(Status.progress)
 	reach_end()
 
+func flag_stats():
+	check_health()
+	check_stamina()
+
+func check_health():
+	if Status.lives <= 0:
+		LoadingTransition.change_scene("res://scenes/levels/bike_broke.tscn")
+	else: pass
+
+func check_stamina():
+	if Status.stamina <= 1:
+		Status.speed -= 90
+		$StaminaRestore.start()
+	if Status.stamina >= 100:
+		Status.speed += 100
 
 func reach_end():
 	if progress_so_far <= 1:
@@ -48,3 +65,12 @@ func _process(delta):
 	# Steadily move the level to the left
 	position = position.move_toward(target, delta * move_speed)
 
+func _on_stamina_restore_timeout():
+	if Status.stamina <= 100:
+		Status.stamina += 10
+
+func _on_stamina_drain_timeout():
+	Status.stamina -=1
+
+func update_speed():
+	move_speed = Status.speed
