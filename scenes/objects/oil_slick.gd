@@ -12,9 +12,9 @@ func _process(delta):
 	if drain_stamina:
 		Status.stamina = clampi(Status.stamina - stamina_drain_rate, 0, 100)
 
-func _input(event):
-	if (event.is_action_pressed("debug_oil_slick")):
-		drain_stamina = not drain_stamina
+#func _input(event):
+	#if (event.is_action_pressed("debug_oil_slick")):
+	#	drain_stamina = not drain_stamina
 
 func _on_body_entered(body):
 	drain_stamina = true
