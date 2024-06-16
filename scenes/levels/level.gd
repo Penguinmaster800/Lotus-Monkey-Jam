@@ -25,7 +25,7 @@ func _ready():
 	#  the player is moving to the right
 	target = Vector2(position.x - level_length, position.y)
 	# Set defaults for all subsequent levels
-	lane_count = 1
+	lane_count = Status.current_area + 2
 	lane_height = 32
 	bottom_lane_y_coord = get_viewport_rect().size.y - lane_height
 	level_ready.emit(lane_count, lane_height, bottom_lane_y_coord)
