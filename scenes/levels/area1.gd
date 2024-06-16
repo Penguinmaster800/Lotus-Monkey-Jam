@@ -23,7 +23,8 @@ func _ready():
 	_spawn_second_area(arrangement_2)
 	counter = 2
 	Status.current_area = 1
-	Status.time_remaining = 10
+	Status.time_remaining = 70
+	Status.stamina = 100
 	print("area1")
 
 	super._ready()
@@ -52,5 +53,6 @@ func _spawn_area(random_arrangement):
 	loaded_area.loading_area_entered.connect(_on_loaded_area_body_entered)
 	_randomize_arrangement()
 	Status.progress -= 1
+	
 
 

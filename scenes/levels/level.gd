@@ -35,7 +35,30 @@ func _ready():
 	Status.connect("stat_change", flag_stats)
 	Status.connect("speed_change", update_speed)
 	Status.connect("time_change", flag_time)
+	Status.connect("area_change", update_area)
+	update_area()
 	
+	
+
+
+func update_area():
+	if Status.current_area == 1:
+		$AudioStreamPlayer.play()
+	if Status.current_area == 2:
+		$AudioStreamPlayer.play()
+	if Status.current_area == 3:
+		$AudioStreamPlayer.play()
+
+
+func update_sky():
+	if Status.current_area == 1:
+		$AnimationPlayer.play("Area 1 sky")
+	if Status.current_area == 2:
+		$AnimationPlayer.play("Area 1 sky")
+	if Status.current_area == 3:
+		$AnimationPlayer.play("Area 1 sky")
+	else: pass
+
 func current_progress():
 	progress_so_far = int(Status.progress)
 	reach_end()
@@ -51,12 +74,12 @@ func check_health():
 
 func check_stamina():
 	if Status.stamina <= 1:
-		if Status.speed >= 100:
-			Status.speed -= 90
+		if Status.speed >= 110:
+			Status.speed -= 100
 			$StaminaRestore.start()
 		else: pass
 	if Status.stamina >= 40:
-		if Status.speed <= 100:
+		if Status.speed <= 110:
 			Status.speed += 90
 		else: pass
 
