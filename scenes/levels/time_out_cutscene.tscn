@@ -1,12 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ulqjum521xo"]
+[gd_scene load_steps=7 format=3 uid="uid://1ulqjum521xo"]
 
-[ext_resource type="Script" path="res://IntroCutscene.gd" id="1_n2rvp"]
+[ext_resource type="Script" path="res://scenes/levels/time_out_cutscene.gd" id="1_1iq43"]
+[ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="1_gbli2"]
+[ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="2_eujuo"]
+[ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_640wd"]
+[ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="4_p4573"]
+[ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="5_1syre"]
 
-[node name="IntroCutscene" type="Node2D"]
-script = ExtResource("1_n2rvp")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="IntroCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1iq43")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gbli2")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 89.0
+offset_top = 110.0
+offset_right = 129.0
+offset_bottom = 150.0
+rotation = -0.314391
+texture_normal = ExtResource("2_eujuo")
+texture_pressed = ExtResource("3_640wd")
+texture_hover = ExtResource("3_640wd")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 170.0
+offset_bottom = 152.0
+rotation = -0.238683
+texture_normal = ExtResource("4_p4573")
+texture_pressed = ExtResource("5_1syre")
+texture_hover = ExtResource("5_1syre")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

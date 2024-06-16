@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyet6c2ctwbrp"]
+[gd_scene load_steps=3 format=3 uid="uid://b1jam5ufvupvv"]
 
 [ext_resource type="Script" path="res://scenes/objects/Pickups/Area2D.gd" id="1_7mlla"]
 
