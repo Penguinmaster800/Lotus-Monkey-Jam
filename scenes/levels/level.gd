@@ -26,7 +26,7 @@ func _ready():
 	target = Vector2(position.x - level_length, position.y)
 	# Set defaults for all subsequent levels
 	lane_count = Status.current_area + 2
-	lane_height = 32
+	lane_height = 16
 	bottom_lane_y_coord = get_viewport_rect().size.y - lane_height
 	level_ready.emit(lane_count, lane_height, bottom_lane_y_coord)
 	

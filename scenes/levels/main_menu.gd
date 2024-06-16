@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	Status.current_area = 1
+
 func _on_quit_button_pressed():
 	get_tree().quit()
 

@@ -41,7 +41,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -24.0
+offset_top = -180.0
+offset_bottom = -156.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_okn73")
@@ -50,9 +51,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_okn73")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 128.0
-offset_top = 160.0
+offset_top = 4.0
 offset_right = 192.0
-offset_bottom = 176.0
+offset_bottom = 20.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Stamina"]
 layout_mode = 1
@@ -66,15 +67,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_e4w8n")
 step = 1.0
 value = 80.0
 show_percentage = false
-metadata/_edit_lock_ = true
 
 [node name="TimeLeft" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 250.0
-offset_top = 160.0
+offset_top = 4.0
 offset_right = 314.0
-offset_bottom = 176.0
+offset_bottom = 20.0
 
 [node name="TimeLeftPanel" type="Panel" parent="TimeLeft"]
 layout_mode = 1
@@ -85,7 +85,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_i4i3m")
 theme_override_styles/panel = SubResource("StyleBoxFlat_51ux7")
-metadata/_edit_lock_ = true
 
 [node name="TimeLeft" type="Label" parent="TimeLeft/TimeLeftPanel"]
 layout_mode = 1
@@ -96,15 +95,14 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "00:00:00"
 label_settings = SubResource("LabelSettings_d6jxd")
-metadata/_edit_lock_ = true
 
 [node name="LevelProgress" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 4.0
-offset_top = 160.0
+offset_top = 4.0
 offset_right = 100.0
-offset_bottom = 176.0
+offset_bottom = 20.0
 
 [node name="ProgressBar" type="HSlider" parent="LevelProgress"]
 layout_mode = 1
@@ -121,12 +119,15 @@ max_value = 8.0
 editable = false
 tick_count = 8
 ticks_on_borders = true
-metadata/_edit_lock_ = true
 
 [node name="MuteButton" parent="." instance=ExtResource("2_c6xjl")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 303.0
+offset_top = 27.0
+offset_right = 303.0
+offset_bottom = 27.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 4
@@ -136,10 +137,10 @@ size_flags_vertical = 4
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 24.0
-offset_right = 0.0
-offset_bottom = 24.0
+offset_left = 306.0
+offset_top = 49.0
+offset_right = 306.0
+offset_bottom = 49.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 4

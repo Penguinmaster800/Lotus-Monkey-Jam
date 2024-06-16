@@ -17,11 +17,14 @@ func change_area() -> void:
 	get_tree().change_scene_to_file(target_area)
 	print(target_area)
 	$AnimationPlayer.play_backwards("fade_to_black")
-	await $AnimationPlayer.animation_finished
 	Status.current_area += 1
+	await $AnimationPlayer.animation_finished
+	
 	check_area()
 
 func check_area():
+	if Status.current_area == 1:
+		target_area = "res://scenes/levels/area2.tscn"
 	if Status.current_area == 2:
 		target_area = "res://scenes/levels/area3.tscn"
 	if Status.current_area == 3:

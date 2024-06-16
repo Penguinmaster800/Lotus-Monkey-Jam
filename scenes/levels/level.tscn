@@ -25,7 +25,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -134.0
+offset_top = -113.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0.901802, 0.322045, 1)
@@ -37,5 +37,6 @@ color = Color(0, 0.901802, 0.322045, 1)
 [node name="Hud" parent="." instance=ExtResource("3_o0sr6")]
 
 [node name="OilSlick" parent="." instance=ExtResource("4_luxru")]
+visible = false
 
 [connection signal="level_ready" from="." to="EmptyNodeSoThePlayerDoesNotMoveBackwardsAutomatically/Player" method="_on_level_level_ready"]
