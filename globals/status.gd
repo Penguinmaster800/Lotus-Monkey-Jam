@@ -9,7 +9,6 @@ var lives: int = 5:
 		lives = value
 		stat_change.emit()
 
-
 var stamina: int = 100:
 	set(value):
 		stamina = value

@@ -18,7 +18,8 @@ func _randomize_arrangement():
 func _ready():
 	_spawn_first_area(arrangement_1)
 	_spawn_second_area(arrangement_2)
-	counter = 1
+	counter = 2
+	Status.current_area = 1
 	
 	super._ready()
 
@@ -29,9 +30,10 @@ func _spawn_first_area(selected_arrangement):
 
 func _spawn_second_area(selected_arrangement):
 	var loaded_area = selected_arrangement.instantiate() as Node2D
-	loaded_area.set_global_position(Vector2(480,0))
+	loaded_area.set_global_position(Vector2(960,0))
 	$LoadedGround.add_child(loaded_area)
 	loaded_area.loading_area_entered.connect(_on_loaded_area_body_entered)
+	
 	
 func _on_loaded_area_body_entered():
 	_spawn_area(random_arrangement)
@@ -44,5 +46,6 @@ func _spawn_area(random_arrangement):
 	$LoadedGround.add_child(loaded_area)
 	loaded_area.loading_area_entered.connect(_on_loaded_area_body_entered)
 	_randomize_arrangement()
+	Status.progress -= 1
 
 

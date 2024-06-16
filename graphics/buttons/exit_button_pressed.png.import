@@ -2,16 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf3bx7bu34gb4"
-path="res://.godot/imported/start_menu_blank.png-3152b3c0a7a8cee0a4601c106bdf2254.ctex"
+
+uid="uid://cffwsdmo5cxad"
+
+path="res://.godot/imported/exit_button_pressed.png-75d805ff624a45abc9d32e2d74358bec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/sprites/start_menu_blank.png"
-dest_files=["res://.godot/imported/start_menu_blank.png-3152b3c0a7a8cee0a4601c106bdf2254.ctex"]
+source_file="res://graphics/buttons/exit_button_pressed.png"
+dest_files=["res://.godot/imported/exit_button_pressed.png-75d805ff624a45abc9d32e2d74358bec.ctex"]
 
 [params]
 
