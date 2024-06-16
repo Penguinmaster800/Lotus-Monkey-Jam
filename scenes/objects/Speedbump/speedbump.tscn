@@ -1,17 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddqulobfyp6rm"]
+[gd_scene load_steps=4 format=3 uid="uid://ddqulobfyp6rm"]
 
 [ext_resource type="Script" path="res://scenes/objects/Speedbump/speedbump.gd" id="1_0usmc"]
+[ext_resource type="Texture2D" uid="uid://cnht3su1h3vb7" path="res://graphics/spritesheet/hazards_16x16_spritesheet.png" id="2_joorg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwx41"]
+size = Vector2(7, 14)
 
 [node name="Speedbump" type="Area2D"]
 visibility_layer = 4
 script = ExtResource("1_0usmc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_pwx41")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_joorg")
+hframes = 3
+frame = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

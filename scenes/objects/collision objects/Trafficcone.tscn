@@ -1,17 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dinnhlf8ia5a2"]
+
+[gd_scene load_steps=4 format=3 uid="uid://cmbe8kacx83da"]
+
+[ext_resource type="Texture2D" uid="uid://cnht3su1h3vb7" path="res://graphics/spritesheet/hazards_16x16_spritesheet.png" id="1_agtbc"]
+
 
 [sub_resource type="GDScript" id="GDScript_oqcbe"]
 script/source = "extends Area2D
 
-
-
 func _on_body_entered(_body):
 	Status.lives -= 1
-	print(\"lives\")
-	print(Status.lives)
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqlyy"]
+size = Vector2(6, 10)
 
 [node name="Trafficcone" type="Node2D"]
 
@@ -19,9 +20,11 @@ func _on_body_entered(_body):
 visibility_layer = 4
 script = SubResource("GDScript_oqcbe")
 
+[node name="Sprite2D" type="Sprite2D" parent="Trafficcone"]
+texture = ExtResource("1_agtbc")
+hframes = 3
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trafficcone"]
 shape = SubResource("RectangleShape2D_hqlyy")
-
-[node name="Sprite2D" type="Sprite2D" parent="Trafficcone/CollisionShape2D"]
 
 [connection signal="body_entered" from="Trafficcone" to="Trafficcone" method="_on_body_entered"]

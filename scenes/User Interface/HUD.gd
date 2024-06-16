@@ -6,7 +6,7 @@ func _ready():
 	Status.progress_change.connect(_on_progress_change)
 
 func _on_status_stat_change():
-	$Stamina/ProgressBar.value = 5 / Status.lives * 100
+	$Stamina/ProgressBar.value = Status.lives
 
 func _on_progress_change():
 	$LevelProgress/ProgressBar.value = 10 - Status.progress

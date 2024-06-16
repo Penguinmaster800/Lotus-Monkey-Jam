@@ -7,12 +7,9 @@ script/source = "extends Area2D
 
 func _on_body_entered(_body):
 	Status.lives -= 1
-	print(\"lives\")
-	print(Status.lives)
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxc"]
-size = Vector2(20, 11)
+size = Vector2(20, 9)
 
 [sub_resource type="Gradient" id="Gradient_lvl5f"]
 offsets = PackedFloat32Array(0, 0.843373, 0.933735)
@@ -26,12 +23,12 @@ visibility_layer = 4
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -5.5)
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_r1vxc")
 
 [node name="Sprite2D" parent="." index="1"]
-position = Vector2(0, -5.5)
-scale = Vector2(0.3125, 0.171875)
+position = Vector2(0, -4.5)
+scale = Vector2(0.3125, 0.140625)
 texture = SubResource("GradientTexture2D_kuw3c")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
