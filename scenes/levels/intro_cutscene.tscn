@@ -1,15 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://lfc72owb3kdv"]
+[gd_scene load_steps=9 format=3 uid="uid://lfc72owb3kdv"]
 
 [ext_resource type="Script" path="res://IntroCutscene.gd" id="1_qofev"]
+[ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="2_exgv1"]
+[ext_resource type="Texture2D" uid="uid://djxjhmrbnr8yf" path="res://graphics/placeholders/temp 2.png" id="3_yvi03"]
+[ext_resource type="Texture2D" uid="uid://dkdkcupreu08o" path="res://graphics/placeholders/temp 3.png" id="4_y3v5j"]
+[ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="5_ruvrb"]
+[ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="6_kmcuq"]
 
-[node name="IntroCutscene" type="Node2D"]
+[sub_resource type="Animation" id="Animation_hjtcs"]
+resource_name = "Intro"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_exgv1"), ExtResource("3_yvi03"), ExtResource("4_y3v5j")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6, 2, 2.2, 2.7, 3.7, 4.3, 4.5, 5.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:anchors_preset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.7, 2.7, 3.7, 3.8, 5.1, 5.9, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 15, 0, 0, 15, 0, 0, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gu7t"]
+_data = {
+"Intro": SubResource("Animation_hjtcs")
+}
+
+[node name="IntroCutscene" type="CanvasLayer"]
+scale = Vector2(0.4, 0.4)
+transform = Transform2D(0.4, 0, 0, 0.4, 0, 0)
 script = ExtResource("1_qofev")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1gu7t")
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.99998
+offset_right = 403.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_exgv1")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(2.49625, 2.5021)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 737.5
+offset_top = 402.5
+offset_right = 777.5
+offset_bottom = 442.5
+rotation = -0.314391
+texture_normal = ExtResource("5_ruvrb")
+texture_pressed = ExtResource("6_kmcuq")
+texture_hover = ExtResource("6_kmcuq")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

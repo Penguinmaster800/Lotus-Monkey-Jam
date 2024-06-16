@@ -7,7 +7,7 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 func _on_play_button_pressed():
-	LoadingTransition.change_scene("res://scenes/levels/area1.tscn")
+	LoadingTransition.change_scene("res://scenes/levels/intro_cutscene.tscn")
 
 func _on_timer_timeout():
 	var animation_index = randi_range(0, 2)
