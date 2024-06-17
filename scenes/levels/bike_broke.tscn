@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/bike_broke.gd" id="1_x1xek"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="2_0llty"]
-[ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="2_vudha"]
+[ext_resource type="Texture2D" uid="uid://18m5jiqtsp7y" path="res://graphics/splashscreens/lose_health_320x180.png" id="2_kfbcy"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_fu1r4"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="5_5vk3f"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="6_8np2f"]
@@ -25,14 +25,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_vudha")
+texture = ExtResource("2_kfbcy")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 110.0
-offset_right = 129.0
-offset_bottom = 150.0
+offset_left = 36.0
+offset_top = 78.0
+offset_right = 76.0
+offset_bottom = 118.0
 rotation = -0.314391
 texture_normal = ExtResource("2_0llty")
 texture_pressed = ExtResource("3_fu1r4")
@@ -40,10 +40,10 @@ texture_hover = ExtResource("3_fu1r4")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 112.0
-offset_right = 170.0
-offset_bottom = 152.0
+offset_left = 89.0
+offset_top = 78.0
+offset_right = 131.0
+offset_bottom = 118.0
 rotation = -0.238683
 texture_normal = ExtResource("5_5vk3f")
 texture_pressed = ExtResource("6_8np2f")
