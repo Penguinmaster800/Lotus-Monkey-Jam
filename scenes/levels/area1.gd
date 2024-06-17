@@ -5,14 +5,17 @@ var arrangement_1: PackedScene = preload("res://scenes/levels/area 1/arrangement
 var arrangement_2: PackedScene = preload("res://scenes/levels/area 1/arrangement_2.tscn")
 var arrangement_3: PackedScene = preload("res://scenes/levels/area 1/arrangement_3.tscn")
 var arrangement_4: PackedScene = preload("res://scenes/levels/area 1/arrangement_4.tscn")
-
+var arrangement_5: PackedScene = preload("res://scenes/levels/area 1/arrangement_5.tscn")
+var arrangement_6: PackedScene = preload("res://scenes/levels/area 1/arrangement_6.tscn")
+var arrangement_7: PackedScene = preload("res://scenes/levels/area 1/arrangement_7.tscn")
+var arrangement_8: PackedScene = preload("res://scenes/levels/area 1/arrangement_8.tscn")
 
 var arrangement_base: PackedScene = preload("res://scenes/levels/arrangement.base.tscn")
 
 var counter = 1
 
 #selection of which arrangement to load
-var layout_options := [arrangement_2, arrangement_3, arrangement_4]
+var layout_options := [arrangement_2, arrangement_3, arrangement_4,  arrangement_5, arrangement_6, arrangement_7, arrangement_8]
 var random_arrangement = layout_options[randi()%len(layout_options)]
 
 func _randomize_arrangement():
