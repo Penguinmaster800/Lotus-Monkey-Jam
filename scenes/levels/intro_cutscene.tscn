@@ -1,16 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://lfc72owb3kdv"]
+[gd_scene load_steps=13 format=3 uid="uid://lfc72owb3kdv"]
 
 [ext_resource type="Script" path="res://IntroCutscene.gd" id="1_qofev"]
 [ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="2_exgv1"]
-[ext_resource type="Texture2D" uid="uid://djxjhmrbnr8yf" path="res://graphics/placeholders/temp 2.png" id="3_yvi03"]
-[ext_resource type="Texture2D" uid="uid://dkdkcupreu08o" path="res://graphics/placeholders/temp 3.png" id="4_y3v5j"]
+[ext_resource type="Texture2D" uid="uid://6rxpkj6ibjtk" path="res://graphics/splashscreens/intro_part_one_320x180.png" id="2_juqh4"]
+[ext_resource type="Texture2D" uid="uid://ctsrsely32gxl" path="res://graphics/splashscreens/intro_part_two_320x180.png" id="3_awtxr"]
+[ext_resource type="Texture2D" uid="uid://bu1ugpxfiywce" path="res://graphics/splashscreens/intro_part_three_320x180.png" id="4_4e3t1"]
+[ext_resource type="Texture2D" uid="uid://c84myv3ij7cah" path="res://graphics/splashscreens/intro_part_four_320x180.png" id="5_b66d0"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="5_ruvrb"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="6_kmcuq"]
+[ext_resource type="Texture2D" uid="uid://dxdy2l2nkcy3a" path="res://graphics/splashscreens/intro_part_five_320x180.png" id="6_t5t1j"]
 [ext_resource type="AudioStream" uid="uid://cp362xecy0nbd" path="res://graphics/Music/578969__nomiqbomi__suggestion-5(levelcomplete).mp3" id="7_3mhft"]
 
 [sub_resource type="Animation" id="Animation_hjtcs"]
 resource_name = "Intro"
-length = 6.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -18,10 +21,10 @@ tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2.2, 4.5, 6, 8.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_exgv1"), ExtResource("3_yvi03"), ExtResource("4_y3v5j")]
+"values": [ExtResource("2_juqh4"), ExtResource("3_awtxr"), ExtResource("4_4e3t1"), ExtResource("5_b66d0"), ExtResource("6_t5t1j")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -30,10 +33,10 @@ tracks/1/path = NodePath("ColorRect:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.6, 2, 2.2, 2.7, 3.7, 4.3, 4.5, 5.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.6, 2, 2.2, 2.7, 3.7, 4.3, 4.5, 5.1, 7.3, 7.9, 8.1, 8.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -42,10 +45,10 @@ tracks/2/path = NodePath("ColorRect:anchors_preset")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.6, 1.7, 2.7, 3.7, 3.8, 5.1, 5.9, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.6, 1.7, 2.7, 3.7, 3.8, 5.1, 7.3, 7.4, 8.7, 9.9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 0, 15, 0, 0, 15, 0, 0, 15]
+"values": [0, 0, 15, 0, 0, 15, 0, 0, 15, 0, 0, 15]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1gu7t"]
@@ -70,12 +73,11 @@ libraries = {
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.99998
-offset_right = 403.0
-offset_bottom = 331.0
+anchors_preset = -1
+anchor_right = 2.5
+anchor_bottom = 2.497
+offset_right = -75.0
+offset_bottom = -42.4601
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.1, 1.1)

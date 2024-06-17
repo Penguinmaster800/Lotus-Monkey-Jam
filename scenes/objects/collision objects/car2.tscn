@@ -15,7 +15,7 @@ func _on_body_entered(_body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxc"]
-size = Vector2(28, 13.5)
+size = Vector2(19, 8)
 
 [sub_resource type="Animation" id="Animation_g4c5g"]
 length = 0.001
@@ -55,11 +55,11 @@ _data = {
 
 [node name="CollisionObject" instance=ExtResource("1_lmvjx")]
 visibility_layer = 4
-position = Vector2(5, 1)
+position = Vector2(9, 1)
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -1.25)
+position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_r1vxc")
 
 [node name="Sprite2D" parent="." index="1"]

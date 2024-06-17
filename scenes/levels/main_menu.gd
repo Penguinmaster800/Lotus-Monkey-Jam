@@ -19,3 +19,7 @@ func _on_timer_timeout():
 		$MarginContainer/Control/AnimatedSprite2D.play("look")
 	else:
 		$MarginContainer/Control/AnimatedSprite2D.play("happy")
+
+func _on_credits_button_pressed():
+	GlobalSounds.play()
+	LoadingTransition.change_scene("res://scenes/levels/Credits.tscn")
