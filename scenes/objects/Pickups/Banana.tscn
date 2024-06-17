@@ -1,10 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3bwpkuywsstt"]
+[gd_scene load_steps=7 format=3 uid="uid://b3bwpkuywsstt"]
 
 [ext_resource type="Script" path="res://scenes/scripts/Banana.gd" id="1_ervxg"]
 [ext_resource type="Texture2D" uid="uid://c4v0oyhh7vw7q" path="res://graphics/spritesheet/assets_16x16_spritesheet.png" id="2_ukix5"]
+[ext_resource type="AudioStream" uid="uid://cl1hq1fkpb710" path="res://graphics/SFX/banana.mp3" id="3_03isr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5q5r1"]
 size = Vector2(7, 7.5)
+
+[sub_resource type="Animation" id="Animation_7rqg2"]
+resource_name = "Vanish"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fu23l"]
+_data = {
+"Vanish": SubResource("Animation_7rqg2")
+}
 
 [node name="Banana" type="Node2D"]
 position = Vector2(1, 8)
@@ -26,5 +48,11 @@ vframes = 6
 frame = 10
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Banana"]
+stream = ExtResource("3_03isr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Banana"]
+libraries = {
+"": SubResource("AnimationLibrary_fu23l")
+}
 
 [connection signal="body_entered" from="Banana" to="Banana" method="_on_body_entered"]

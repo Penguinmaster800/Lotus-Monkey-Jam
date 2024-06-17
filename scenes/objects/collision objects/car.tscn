@@ -39,6 +39,7 @@ _data = {
 
 [node name="CollisionObject" instance=ExtResource("1_mbb3d")]
 visibility_layer = 4
+position = Vector2(5, 1)
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
