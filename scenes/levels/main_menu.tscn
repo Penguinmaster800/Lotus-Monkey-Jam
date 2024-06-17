@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://crkpol255wmus"]
+[gd_scene load_steps=12 format=3 uid="uid://crkpol255wmus"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_hvpf8"]
 [ext_resource type="PackedScene" uid="uid://de8xi6ucmqt5b" path="res://scenes/User Interface/mute_button.tscn" id="2_g3peu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="8_8egcm"]
 [ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="9_xh676"]
 [ext_resource type="AudioStream" uid="uid://b7y6ddrlfredw" path="res://graphics/Music/Piki - Happy Walking (freetouse.com)(Level3).mp3" id="10_8vqlb"]
+[ext_resource type="Texture2D" uid="uid://be6m16517sg48" path="res://graphics/buttons/credits_button.png" id="11_n2qva"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -32,9 +33,9 @@ color = Color(0, 0.770712, 0.879824, 1)
 [node name="MuteButton" parent="." instance=ExtResource("2_g3peu")]
 layout_mode = 2
 anchors_preset = 0
-anchor_left = -0.040625
+anchor_left = -0.05625
 anchor_top = -0.0277778
-anchor_right = -0.040625
+anchor_right = -0.05625
 anchor_bottom = -0.0277778
 offset_left = 264.0
 offset_top = 153.0
@@ -46,16 +47,16 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 287.0
+offset_left = 285.0
 offset_top = 147.0
-offset_right = 287.0
+offset_right = 285.0
 offset_bottom = 147.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 10.0
+offset_left = -10.0
 offset_top = 8.0
-offset_right = 206.0
+offset_right = 186.0
 offset_bottom = 204.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_yrhn8")
@@ -108,10 +109,11 @@ autoplay = true
 
 [node name="CreditsButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 140.0
-offset_right = 47.0
-offset_bottom = 180.0
+offset_left = 256.0
+offset_top = 109.0
+offset_right = 320.0
+offset_bottom = 149.0
+texture_normal = ExtResource("11_n2qva")
 
 [connection signal="pressed" from="TextureRect/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="TextureRect/QuitButton" to="." method="_on_quit_button_pressed"]
