@@ -9,6 +9,7 @@ size = Vector2(23, 11)
 
 [node name="SlowingSurface" type="Area2D"]
 visibility_layer = 4
+position = Vector2(4, 0)
 script = ExtResource("1_fetfv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
