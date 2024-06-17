@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://vswuiihdtn31"]
+[gd_scene load_steps=8 format=3 uid="uid://vswuiihdtn31"]
 
 [ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="1_apaot"]
 [ext_resource type="Texture2D" uid="uid://dly2uhec4mlq3" path="res://graphics/splashscreens/credits_320x180.png" id="2_omcvf"]
+[ext_resource type="Script" path="res://scenes/levels/Credits.gd" id="2_w5e8t"]
+[ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="4_bekc6"]
+[ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="5_absuc"]
+
+[sub_resource type="Animation" id="Animation_p5fl5"]
+resource_name = "Credit scroll"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kwsnw"]
+_data = {
+"Credit scroll": SubResource("Animation_p5fl5")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_apaot")
+script = ExtResource("2_w5e8t")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -18,11 +30,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_omcvf")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 40.0
-offset_right = 324.0
-offset_bottom = 164.0
-text = "
-"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kwsnw")
+}
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 273.0
+offset_top = 147.0
+offset_right = 313.0
+offset_bottom = 187.0
+rotation = -0.314391
+texture_normal = ExtResource("4_bekc6")
+texture_pressed = ExtResource("5_absuc")
+texture_hover = ExtResource("5_absuc")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
