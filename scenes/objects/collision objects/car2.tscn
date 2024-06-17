@@ -55,7 +55,7 @@ _data = {
 
 [node name="CollisionObject" instance=ExtResource("1_lmvjx")]
 visibility_layer = 4
-position = Vector2(5, 1)
+position = Vector2(9, 1)
 script = SubResource("GDScript_jxysc")
 
 [node name="CollisionShape2D" parent="." index="0"]
