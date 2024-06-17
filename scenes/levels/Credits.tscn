@@ -1,13 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://vswuiihdtn31"]
+[gd_scene load_steps=11 format=3 uid="uid://vswuiihdtn31"]
 
 [ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="1_apaot"]
 [ext_resource type="Texture2D" uid="uid://dly2uhec4mlq3" path="res://graphics/splashscreens/credits_320x180.png" id="2_omcvf"]
 [ext_resource type="Script" path="res://scenes/levels/Credits.gd" id="2_w5e8t"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="4_bekc6"]
+[ext_resource type="Texture2D" uid="uid://2m3cjfwwpmf1" path="res://graphics/splashscreens/credits_text_320x180.png" id="4_dyh8a"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="5_absuc"]
+[ext_resource type="Texture2D" uid="uid://bayae2idgmyk0" path="res://graphics/splashscreens/credits_text_two_320x180.png" id="5_ylrb1"]
+[ext_resource type="AudioStream" uid="uid://cbdy6m5oruxrx" path="res://graphics/Music/Piki - Healing Spell (freetouse.com)(Win-end).mp3" id="8_xo7nu"]
 
 [sub_resource type="Animation" id="Animation_p5fl5"]
 resource_name = "Credit scroll"
+length = 15.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.9, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_dyh8a"), ExtResource("5_ylrb1")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kwsnw"]
 _data = {
@@ -34,8 +51,10 @@ texture = ExtResource("2_omcvf")
 libraries = {
 "": SubResource("AnimationLibrary_kwsnw")
 }
+autoplay = "Credit scroll"
 
 [node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 273.0
 offset_top = 147.0
 offset_right = 313.0
@@ -44,5 +63,9 @@ rotation = -0.314391
 texture_normal = ExtResource("4_bekc6")
 texture_pressed = ExtResource("5_absuc")
 texture_hover = ExtResource("5_absuc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_xo7nu")
+volume_db = -20.0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
