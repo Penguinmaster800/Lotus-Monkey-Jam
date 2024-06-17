@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://x5dmmt3qiwkd"]
 
 [ext_resource type="Script" path="res://scenes/levels/victory.gd" id="1_2s7wl"]
-[ext_resource type="Texture2D" uid="uid://dkdkcupreu08o" path="res://graphics/placeholders/temp 3.png" id="2_bsd4c"]
+[ext_resource type="Texture2D" uid="uid://vjx6o4p27njh" path="res://graphics/splashscreens/victory_320x180.png" id="2_dj4e4"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="3_cjot3"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="4_tbsjf"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="5_8uav8"]
@@ -24,14 +24,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bsd4c")
+texture = ExtResource("2_dj4e4")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 127.369
-offset_right = 152.0
-offset_bottom = 167.369
+offset_left = 206.0
+offset_top = 140.0
+offset_right = 246.0
+offset_bottom = 180.0
 rotation = -0.314391
 texture_normal = ExtResource("3_cjot3")
 texture_pressed = ExtResource("4_tbsjf")
@@ -39,10 +39,10 @@ texture_hover = ExtResource("4_tbsjf")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 129.369
-offset_right = 193.0
-offset_bottom = 169.369
+offset_left = 249.0
+offset_top = 141.0
+offset_right = 291.0
+offset_bottom = 181.0
 rotation = -0.238683
 texture_normal = ExtResource("5_8uav8")
 texture_pressed = ExtResource("6_x402y")

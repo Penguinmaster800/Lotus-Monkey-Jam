@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://1ulqjum521xo"]
 
 [ext_resource type="Script" path="res://scenes/levels/time_out_cutscene.gd" id="1_1iq43"]
-[ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="1_gbli2"]
+[ext_resource type="Texture2D" uid="uid://ua32h6mopg7n" path="res://graphics/splashscreens/lose_timeout_320x180.png" id="2_15xus"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="2_eujuo"]
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_640wd"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="4_p4573"]
@@ -24,14 +24,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_gbli2")
+texture = ExtResource("2_15xus")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 110.0
-offset_right = 129.0
-offset_bottom = 150.0
+offset_left = 38.0
+offset_top = 79.0
+offset_right = 78.0
+offset_bottom = 119.0
 rotation = -0.314391
 texture_normal = ExtResource("2_eujuo")
 texture_pressed = ExtResource("3_640wd")
@@ -39,10 +39,10 @@ texture_hover = ExtResource("3_640wd")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 112.0
-offset_right = 170.0
-offset_bottom = 152.0
+offset_left = 89.0
+offset_top = 80.0
+offset_right = 131.0
+offset_bottom = 120.0
 rotation = -0.238683
 texture_normal = ExtResource("4_p4573")
 texture_pressed = ExtResource("5_1syre")
