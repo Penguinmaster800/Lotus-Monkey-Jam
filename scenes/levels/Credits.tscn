@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://vswuiihdtn31"]
+
+[ext_resource type="Theme" uid="uid://bxnv6b312fj43" path="res://globals/Font.tres" id="1_apaot"]
+[ext_resource type="Texture2D" uid="uid://dly2uhec4mlq3" path="res://graphics/splashscreens/credits_320x180.png" id="2_omcvf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_apaot")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_omcvf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 324.0
+offset_bottom = 164.0
+text = "
+"
