@@ -30,6 +30,8 @@ func _ready():
 	Status.stamina = 100
 	Status.lives = 10
 	print("area1")
+	$AudioStreamPlayer.playing = Status.play_audio
+	Status.change_play_audio.connect(_on_change_play_audio)
 
 	super._ready()
 
@@ -57,6 +59,6 @@ func _spawn_area(random_arrangement):
 	loaded_area.loading_area_entered.connect(_on_loaded_area_body_entered)
 	_randomize_arrangement()
 	Status.progress -= 1
-	
 
-
+func _on_change_play_audio():
+	$AudioStreamPlayer.playing = Status.play_audio

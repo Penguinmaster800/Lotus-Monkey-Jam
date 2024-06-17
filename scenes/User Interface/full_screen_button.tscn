@@ -37,3 +37,5 @@ shortcut = SubResource("Shortcut_xwft7")
 texture_normal = ExtResource("2_rx4we")
 texture_pressed = ExtResource("3_5n6rx")
 texture_hover = ExtResource("4_85osq")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
