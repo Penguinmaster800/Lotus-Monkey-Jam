@@ -5,6 +5,7 @@ signal progress_change
 signal speed_change
 signal time_change
 signal area_change
+signal change_play_audio
 
 #variables of  player stats
 var lives: int = 10:
@@ -38,3 +39,8 @@ var time_remaining = 70:
 	set(value):
 		time_remaining = value
 		time_change.emit()
+
+var play_audio = true:
+	set(value):
+		play_audio = value
+		change_play_audio.emit()
