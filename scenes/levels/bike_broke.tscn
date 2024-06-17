@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkpg15n31ja6o"]
+[gd_scene load_steps=8 format=3 uid="uid://bkpg15n31ja6o"]
 
 [ext_resource type="Script" path="res://scenes/levels/bike_broke.gd" id="1_x1xek"]
 [ext_resource type="Texture2D" uid="uid://dnxcti7powqdv" path="res://graphics/buttons/play_button.png" id="2_0llty"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_fu1r4"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="5_5vk3f"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="6_8np2f"]
+[ext_resource type="AudioStream" uid="uid://ggh6u5cpltcx" path="res://graphics/Music/554626__code_box__laidback-steps(level failed).wav" id="7_bsgg6"]
 
 [node name="BikeBroke" type="Control"]
 layout_mode = 3
@@ -47,6 +48,11 @@ rotation = -0.238683
 texture_normal = ExtResource("5_5vk3f")
 texture_pressed = ExtResource("6_8np2f")
 texture_hover = ExtResource("6_8np2f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bsgg6")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

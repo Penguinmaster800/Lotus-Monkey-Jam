@@ -25,4 +25,6 @@ hframes = 3
 vframes = 6
 frame = 10
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Banana"]
+
 [connection signal="body_entered" from="Banana" to="Banana" method="_on_body_entered"]

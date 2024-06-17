@@ -7,7 +7,7 @@ signal time_change
 signal area_change
 
 #variables of  player stats
-var lives: int = 5:
+var lives: int = 10:
 	set(value):
 		lives = value
 		stat_change.emit()

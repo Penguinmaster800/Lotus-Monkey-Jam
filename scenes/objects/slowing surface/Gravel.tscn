@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv4dpeqg4xu1s"]
+[gd_scene load_steps=5 format=3 uid="uid://cv4dpeqg4xu1s"]
 
 [ext_resource type="Script" path="res://scenes/objects/slowing surface/Gravel.gd" id="1_fetfv"]
 [ext_resource type="Texture2D" uid="uid://cnht3su1h3vb7" path="res://graphics/spritesheet/hazards_16x16_spritesheet.png" id="2_7rw03"]
+[ext_resource type="AudioStream" uid="uid://2oqsdtshe01j" path="res://graphics/SFX/cartoonrattle.mp3" id="3_txug8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrd2"]
+size = Vector2(23, 11)
 
 [node name="SlowingSurface" type="Area2D"]
 visibility_layer = 4
@@ -13,9 +17,17 @@ texture = ExtResource("2_7rw03")
 hframes = 2
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(1, 0)
-polygon = PackedVector2Array(-14, -3, -6, -3, -5, -6, 12, -6, 12, 7, -5, 7, -5, 3, -14, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_fhrd2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_txug8")
+volume_db = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -9,6 +9,7 @@ func _process(delta):
 	pass
 
 func _on_button_pressed():
+	GlobalSounds.play()
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:

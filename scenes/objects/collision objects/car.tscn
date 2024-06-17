@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcw8d4rs40s4d"]
+[gd_scene load_steps=8 format=3 uid="uid://bcw8d4rs40s4d"]
 
 [ext_resource type="PackedScene" uid="uid://df0l8sk53x8qw" path="res://scenes/objects/collision objects/collision_object.tscn" id="1_mbb3d"]
 [ext_resource type="Texture2D" uid="uid://bxveu8j8sxdad" path="res://graphics/spritesheet/assets_32x32_spritesheet.png" id="2_ne5cn"]
+[ext_resource type="AudioStream" uid="uid://cpvx3u4ry1keq" path="res://graphics/SFX/car_impact(attribution).mp3" id="3_g7dll"]
 
 [sub_resource type="GDScript" id="GDScript_jxysc"]
 script/source = "extends Area2D
 
 func _on_body_entered(_body):
+	$AudioStreamPlayer2D.play()
 	Status.lives -= 1
 	print(\"lives\")
 	print(Status.lives)
@@ -55,5 +57,8 @@ libraries = {
 "": SubResource("AnimationLibrary_3wul6")
 }
 autoplay = "Driving 2"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("3_g7dll")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
