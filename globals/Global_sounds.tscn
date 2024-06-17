@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dduxg58w3xait"]
+
+[ext_resource type="AudioStream" uid="uid://chdtfdapwjjl1" path="res://graphics/SFX/Select.mp3" id="1_r7oo2"]
+
+[node name="CanvasLayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_r7oo2")
+volume_db = -15.0

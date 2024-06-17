@@ -28,6 +28,6 @@ func check_area():
 	if Status.current_area == 2:
 		target_area = "res://scenes/levels/area3.tscn"
 	if Status.current_area == 3:
-		target_area = "res://scenes/levels/main_menu.tscn"
+		target_area = "res://scenes/levels/victory.tscn"
 	else:
 		pass

@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd22k5p52r76d"]
+[gd_scene load_steps=4 format=3 uid="uid://dd22k5p52r76d"]
 
 [ext_resource type="PackedScene" uid="uid://cmolia7juxj0s" path="res://scenes/levels/level.tscn" id="1_g1wjy"]
 [ext_resource type="Script" path="res://scenes/levels/area2.gd" id="2_0fjvv"]
+[ext_resource type="AudioStream" uid="uid://dgx8fx0m1l8xr" path="res://graphics/Music/Aylex - Spring (freetouse.com)Level-2.mp3" id="3_2j3bt"]
 
 [node name="Area2" instance=ExtResource("1_g1wjy")]
 script = ExtResource("2_0fjvv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("3_2j3bt")
+volume_db = -15.0
+autoplay = true

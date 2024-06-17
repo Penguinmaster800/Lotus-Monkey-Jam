@@ -17,6 +17,7 @@ func _process(_delta):
 	#	drain_stamina = not drain_stamina
 
 func _on_body_entered(_body):
+	$AudioStreamPlayer2D.play()
 	drain_stamina = true
 
 func _on_body_exited(_body):

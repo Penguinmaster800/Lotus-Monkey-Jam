@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://x5dmmt3qiwkd"]
+[gd_scene load_steps=8 format=3 uid="uid://x5dmmt3qiwkd"]
 
 [ext_resource type="Script" path="res://scenes/levels/victory.gd" id="1_2s7wl"]
 [ext_resource type="Texture2D" uid="uid://dkdkcupreu08o" path="res://graphics/placeholders/temp 3.png" id="2_bsd4c"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="4_tbsjf"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="5_8uav8"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="6_x402y"]
+[ext_resource type="AudioStream" uid="uid://cbdy6m5oruxrx" path="res://graphics/Music/Piki - Healing Spell (freetouse.com)(Win-end).mp3" id="7_asg2m"]
 
 [node name="VictoryCutscene" type="Control"]
 layout_mode = 3
@@ -46,6 +47,11 @@ rotation = -0.238683
 texture_normal = ExtResource("5_8uav8")
 texture_pressed = ExtResource("6_x402y")
 texture_hover = ExtResource("6_x402y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_asg2m")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

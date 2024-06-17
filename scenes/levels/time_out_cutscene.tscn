@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1ulqjum521xo"]
+[gd_scene load_steps=8 format=3 uid="uid://1ulqjum521xo"]
 
 [ext_resource type="Script" path="res://scenes/levels/time_out_cutscene.gd" id="1_1iq43"]
 [ext_resource type="Texture2D" uid="uid://d0lgh7dottue" path="res://graphics/placeholders/temp 1.png" id="1_gbli2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpcmwa30clvx6" path="res://graphics/buttons/play_button_pressed.png" id="3_640wd"]
 [ext_resource type="Texture2D" uid="uid://b2ni347t037d" path="res://graphics/buttons/exit_button.png" id="4_p4573"]
 [ext_resource type="Texture2D" uid="uid://cffwsdmo5cxad" path="res://graphics/buttons/exit_button_pressed.png" id="5_1syre"]
+[ext_resource type="AudioStream" uid="uid://ggh6u5cpltcx" path="res://graphics/Music/554626__code_box__laidback-steps(level failed).wav" id="7_y3jo0"]
 
 [node name="IntroCutscene" type="Control"]
 layout_mode = 3
@@ -46,6 +47,11 @@ rotation = -0.238683
 texture_normal = ExtResource("4_p4573")
 texture_pressed = ExtResource("5_1syre")
 texture_hover = ExtResource("5_1syre")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_y3jo0")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -4,9 +4,11 @@ func _ready():
 	Status.current_area = 1
 
 func _on_quit_button_pressed():
+	GlobalSounds.play()
 	get_tree().quit()
 
 func _on_play_button_pressed():
+	GlobalSounds.play()
 	LoadingTransition.change_scene("res://scenes/levels/intro_cutscene.tscn")
 
 func _on_timer_timeout():

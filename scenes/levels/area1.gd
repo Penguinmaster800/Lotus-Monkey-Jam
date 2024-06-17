@@ -25,6 +25,7 @@ func _ready():
 	Status.current_area = 1
 	Status.time_remaining = 70
 	Status.stamina = 100
+	Status.lives = 10
 	print("area1")
 
 	super._ready()

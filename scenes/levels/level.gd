@@ -70,7 +70,8 @@ func flag_stats():
 func check_health():
 	if Status.lives <= 0:
 		LoadingTransition.change_scene("res://scenes/levels/bike_broke.tscn")
-	else: pass
+	if Status.lives >= 11:
+		Status.lives = 10
 
 func check_stamina():
 	if Status.stamina <= 1:
@@ -79,9 +80,11 @@ func check_stamina():
 			$StaminaRestore.start()
 		else: pass
 	if Status.stamina >= 40:
-		if Status.speed <= 110:
+		if Status.speed <= 70:
 			Status.speed += 90
 		else: pass
+	if Status.stamina >= 101:
+		Status.stamina = 100
 
 func flag_time():
 	if Status.time_remaining <= 0:
